@@ -21,7 +21,7 @@ version: 1.0.0
 # Although fhirVersions is 0..* in the ImplementationGuide resource
 # it can be a single item OR and array here, but the current tooling 
 # only supports one FHIR version per Implementation Guide
-fhirVersion: 4.0.1
+fhirVersion: 6.0.0-ballot5
 
 # The following two lines correspond to items that used to be in
 # ig.ini but were moved to IG.definition.parameter. For
@@ -59,10 +59,10 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for `uri` and `version`.
-# The FHIR Testing IG defines TestPlan / TestScript / TestReport as "R6
-# Additional Resources" - resources usable from an IG on any FHIR version,
-# but not part of the R4 core spec. It is not on packages.fhir.org yet, so
-# it is pulled from the CI build with `current`.
+# TestPlan/TestScript/TestReport were in R6 core through 6.0.0-ballot3 but were
+# removed again for ballot5; they now live only in the FHIR Testing IG, which
+# carries "the latest definitions of the R6 resources until they are considered
+# stable". Not on packages.fhir.org yet, so it comes from the CI build.
 dependencies:
   hl7.fhir.uv.testing: current
 
@@ -109,7 +109,7 @@ resources:
   # nothing else. To remove, delete all three of:
   #   1. this resource entry
   #   2. the path-binary parameter (further down, marked the same way)
-  #   3. input/resources/Binary-meow-client-gherkin-script.json
+  #   3. input/fsh/binary-gherkin.fsh
   Binary/meow-client-gherkin-script:
     name: MEOW Client Gherkin Script
     description: Gherkin feature file with the test scenarios for the MEOW Medication Overview Consumer actor.
@@ -117,6 +117,13 @@ resources:
     extension:
       # This extension is what turns the Binary into highlighted Gherkin
       # instead of raw data.
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: text/x-gherkin
+  Binary/meow-server-gherkin-script:
+    name: MEOW Server Gherkin Script
+    description: Gherkin feature file with the test scenarios for the MEOW Medication Overview Responder actor.
+    exampleBoolean: false
+    extension:
       - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
         valueCode: text/x-gherkin
   # ===== END RENDERING ONLY ==============================================
