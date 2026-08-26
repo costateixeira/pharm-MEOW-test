@@ -7,9 +7,9 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 
-id: my-ig
-canonical: http://example.com/fhir/example
-url: http://example.com/fhir/example/ImplementationGuide/my-ig
+id: ihe.pharm.meow.test
+canonical: http://example.com/fhir/ihe.pharm.meow.test
+url: http://example.com/fhir/example/ImplementationGuide/ihe.pharm.meow.test
 name: ExampleIG
 title: "HL7 FHIR Implementation Guide: Example IG Release 1 - US Realm | STU1"
 description: Example IG exercises many of the fields in a SUSHI configuration.
@@ -99,6 +99,23 @@ dependencies:
 # The following are simple examples to demonstrate what this might
 # look like:
 resources:
+  # These two are authored JSON, not FSH, and must stay that way. TestPlan is an
+  # "additional resource": the IG Publisher requires a root-level
+  # "resourceDefinition" naming the definition the instance conforms to, and
+  # errors with VALIDATION_ADDITIONAL_RESOURCE_ABSENT without it. That element is
+  # not part of the StructureDefinition, so SUSHI rejects it and FSH cannot emit
+  # it. Without it the publisher parses against the wrong TestPlan model and
+  # silently drops runner / mode / suite - which takes the suite.input.file
+  # pointer to the Gherkin with it.
+  TestPlan/meow-client-tests:
+    name: MEOW Consumer (Client) Test Plan
+    description: Declares the Gherkin test cases for the IHE PHARM MEOW Medication Overview Consumer actor.
+    exampleBoolean: false
+  TestPlan/meow-server-tests:
+    name: MEOW Responder (Server) Test Plan
+    description: Declares the Gherkin test cases for the IHE PHARM MEOW Medication Overview Responder actor.
+    exampleBoolean: false
+
   # ===== RENDERING ONLY - delete this block as a unit =====================
   # The Gherkin is delivered to test runners as a raw .feature file under
   # package/tests/, via the path-test parameter below. That is the real

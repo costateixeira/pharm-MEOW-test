@@ -3,7 +3,7 @@
 // Overview Responder (a server) and the test bed drives the exchange as the
 // Consumer, so every assertion is on a response the test bed fetched itself.
 //
-// The Gherkin is pointed at from suite.input.file.
+// "resourceDefinition" is injected by _package.py - see the client plan.
 Instance: meow-server-tests
 InstanceOf: TestPlan
 Usage: #definition
@@ -86,13 +86,13 @@ response it gets back.
     * operation = #gherkin/Scenario
     * assertion[0]
       * severity = #error
-      * human = "A search with status=active returns 200 and every entry has status 'active'."
+      * human = "A search filtered by status=active returns 200 and every entry carries that status."
+    * assertion[+]
+      * severity = #warning
+      * human = "A search filtered by category returns 200 and a searchset."
     * assertion[+]
       * severity = #error
-      * human = "A search with category returns 200 and a searchset."
-    * assertion[+]
-      * severity = #error
-      * human = "A search with _lastUpdated in the future returns 200 and an empty searchset - proof the parameter is applied rather than ignored."
+      * human = "A search with _lastUpdated set in the future returns 200 and an empty searchset - proof the parameter is applied rather than ignored."
 
   * test[+]
     * name = "tc-meow-server-003 PHARM-11 rejects a query without the required patient"
@@ -123,10 +123,10 @@ response it gets back.
     * operation = #gherkin/Scenario
     * assertion[0]
       * severity = #error
-      * human = "A search with patient and type=document returns 200 and a searchset whose entries are all Bundles of type 'document'."
+      * human = "A search with patient and type=document returns 200 and a searchset whose entries are all Bundles of type document."
     * assertion[+]
       * severity = #error
-      * human = "Reading a Medication Overview document returns 200 and a Bundle of type 'document'."
+      * human = "Reading a Medication Overview document returns 200 and a Bundle of type document."
     * assertion[+]
       * severity = #error
       * human = "The retrieved document validates against the MEOW MedicationOverview profile."

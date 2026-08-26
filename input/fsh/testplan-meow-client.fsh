@@ -1,8 +1,11 @@
-// TestPlan/TestScript/TestReport were in R6 core up to 6.0.0-ballot3, but were
-// taken out again for ballot5 - they now live only in hl7.fhir.uv.testing, which
-// holds "the latest definitions of the R6 resources until they are considered
-// stable". So this IG depends on that package and uses its TestPlan shape
-// (scope / runner / mode / suite), not the older testCase shape.
+// TestPlan comes from hl7.fhir.uv.testing. It was in R6 core up to
+// 6.0.0-ballot3 but was taken out again for 6.0.0-ballot5, the version this IG
+// targets, so the testing IG is the only source for it.
+//
+// That makes it an "additional resource", which the tooling expects to carry a
+// root-level "resourceDefinition". That element is not part of the
+// StructureDefinition, so SUSHI rejects it and FSH cannot emit it - _package.py
+// injects it after SUSHI runs.
 //
 // The Gherkin is pointed at from suite.input.file.
 Instance: meow-client-tests
@@ -45,7 +48,7 @@ Each `suite.test` below corresponds to one `Scenario:` in the Gherkin feature fi
 
 * suite
   * name = "IHE MEOW Medication Overview Consumer - client-side conformance"
-  * description = "Maps to the Feature of the same name in the Gherkin script below. The test bed plays the Medication Overview Responder while the system under test drives every exchange."
+  * description = "Maps to the Feature of the same name in the Gherkin script. The test bed plays the Medication Overview Responder while the system under test drives every exchange."
 
   // The pointer to the Gherkin.
   * input
