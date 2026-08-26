@@ -59,6 +59,13 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for `uri` and `version`.
+# The FHIR Testing IG defines TestPlan / TestScript / TestReport as "R6
+# Additional Resources" - resources usable from an IG on any FHIR version,
+# but not part of the R4 core spec. It is not on packages.fhir.org yet, so
+# it is pulled from the CI build with `current`.
+dependencies:
+  hl7.fhir.uv.testing: current
+
 #dependencies:
 #  hl7.fhir.us.core: 3.1.0
 #  hl7.fhir.us.mcode:
@@ -91,6 +98,29 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 #     better option (see below).
 # The following are simple examples to demonstrate what this might
 # look like:
+resources:
+  # ===== RENDERING ONLY - delete this block as a unit =====================
+  # The Gherkin is delivered to test runners as a raw .feature file under
+  # package/tests/, via the path-test parameter below. That is the real
+  # mechanism and it does not need this Binary.
+  #
+  # This Binary exists ONLY so the script also renders as a syntax-highlighted
+  # artifact page on the IG website. Removing it costs the rendered page and
+  # nothing else. To remove, delete all three of:
+  #   1. this resource entry
+  #   2. the path-binary parameter (further down, marked the same way)
+  #   3. input/resources/Binary-meow-client-gherkin-script.json
+  Binary/meow-client-gherkin-script:
+    name: MEOW Client Gherkin Script
+    description: Gherkin feature file with the test scenarios for the MEOW Medication Overview Consumer actor.
+    exampleBoolean: false
+    extension:
+      # This extension is what turns the Binary into highlighted Gherkin
+      # instead of raw data.
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: text/x-gherkin
+  # ===== END RENDERING ONLY ==============================================
+
 #resources:
 #  Patient/my-example-patient:
 #    name: My Example Patient
@@ -129,9 +159,11 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 pages:
-  index.xml:
+  index.md:
     title: Home
 #  guidance.md:
+  testing.md:
+    title: Testing
   changes.xml:
   downloads.xml:
 # The ImplementationGuide resource defines several other properties
@@ -158,6 +190,7 @@ pages:
 menu:
   Home: index.html
 #  Guidance: guidance.html
+  Testing: testing.html
   Artifacts: artifacts.html
   Downloads: downloads.html
   Changes: changes.html
@@ -169,6 +202,18 @@ menu:
 # values, the value in the YAML should be a sequence/array. For a
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+parameters:
+  # How the Gherkin actually ships: path-test mirrors input/testing into
+  # package/tests/ in the published package, so the .feature file travels as
+  # Gherkin - not as a FHIR resource - and a runner can resolve
+  # TestPlan.suite.input.file against it.
+  path-test: input/testing
+
+  # ===== RENDERING ONLY - delete with the Binary resource entry above ======
+  # Only needed to resolve the "ig-loader-<filename>" data of that Binary.
+  path-binary: input/testing/gherkin
+  # ===== END RENDERING ONLY ===============================================
+
 #parameters:
 #  excludettl: true
 #  validation: [allow-any-extensions, no-broken-links]
