@@ -232,7 +232,7 @@ parameters:
   # Gherkin - not as a FHIR resource - and a runner can resolve
   # TestPlan.suite.input.file against it.
   path-test: input/testing
-
+  incubator-ig: hl7.fhir.uv.testing
   # ===== RENDERING ONLY - delete with the Binary resource entry above ======
   # Only needed to resolve the "ig-loader-<filename>" data of that Binary.
   path-binary: input/testing/gherkin
