@@ -1,0 +1,41 @@
+IHEPharmMEOWTesting : Validation Results
+=========================================
+
+err = 1, warn = 9, info = 6
+$--
+Generated $--. FHIR version $-- for ihe.pharm.meow.test#$-- (canonical = http://example.com/fhir/ihe.pharm.meow.test)
+ Build Errors : 6 / 5 / 0
+ /work/fsh-generated/resources/Binary-meow-client-gherkin-script : 0 / 0 / 1
+ /work/fsh-generated/resources/Binary-meow-server-gherkin-script : 0 / 0 / 1
+ /work/fsh-generated/resources/ImplementationGuide-ihe.pharm.meow.test : 1 / 0 / 3
+ /work/fsh-generated/resources/TestPlan-meow-client-tests : 0 / 2 / 3
+ /work/fsh-generated/resources/TestPlan-meow-server-tests : 0 / 2 / 3
+</table>
+== n/a ==
+WARNING: TestPlan/meow-client-tests: Unable to find artifact https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewConsumer nominated as the artifact for test resource /TestPlan/meow-client-tests
+WARNING: TestPlan/meow-server-tests: Unable to find artifact https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewResponder nominated as the artifact for test resource /TestPlan/meow-server-tests
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 160, column 7: The link 'definitions.xml.zip' for "XML" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 165, column 7: The link 'definitions.json.zip' for "JSON" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 170, column 7: The link 'definitions.ttl.zip' for "Turtle" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 178, column 7: The link 'examples.xml.zip' for "XML" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 183, column 7: The link 'examples.json.zip' for "JSON" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 188, column 7: The link 'examples.ttl.zip' for "Turtle" cannot be resolved
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/Binary-meow-client-gherkin-script.json ==
+== fsh-generated/resources/Binary-meow-server-gherkin-script.json ==
+== fsh-generated/resources/ImplementationGuide-ihe.pharm.meow.test.json ==
+INFORMATION: ImplementationGuide/ihe.pharm.meow.test: ImplementationGuide.license: Reference to draft CodeSystem http://hl7.org/fhir/spdx-license|84728b7
+ERROR: ImplementationGuide/ihe.pharm.meow.test: ImplementationGuide.definition.parameter[3].code.code: Unknown code 'incubator-ig' in the CodeSystem 'http://hl7.org/fhir/tools/CodeSystem/ig-parameters' version '1.1.2'
+INFORMATION: Resource: The resource ImplementationGuide/ihe.pharm.meow.test could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/TestPlan-meow-client-tests.json ==
+INFORMATION: TestPlan/meow-client-tests: TestPlan.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+WARNING: TestPlan/meow-client-tests: TestPlan.scope[0].reference: A definition could not be found for Canonical URL 'https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewConsumer'
+WARNING: TestPlan/meow-client-tests: TestPlan.runner: No definition could be found for URL value 'https://www.itb.ec.europa.eu/docs/guides/latest/'
+INFORMATION: Resource: The resource TestPlan/meow-client-tests could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/TestPlan-meow-server-tests.json ==
+INFORMATION: TestPlan/meow-server-tests: TestPlan.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+WARNING: TestPlan/meow-server-tests: TestPlan.scope[0].reference: A definition could not be found for Canonical URL 'https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewResponder'
+WARNING: TestPlan/meow-server-tests: TestPlan.runner: No definition could be found for URL value 'https://www.itb.ec.europa.eu/docs/guides/latest/'
+INFORMATION: Resource: The resource TestPlan/meow-server-tests could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)

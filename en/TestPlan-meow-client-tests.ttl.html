@@ -1,0 +1,366 @@
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MEOW Consumer (Client) Test Plan - TTL Representation - IHE PHARM MEOW: TestPlan and Gherkin Demonstration v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5.1"}
+    h3,h4,h5,h6{--heading-prefix:"5.1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">IHE PHARM MEOW: TestPlan and Gherkin Demonstration</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - 
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/6.0.0-ballot5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="testing.html">Testing</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Changes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MEOW Consumer (Client) Test Plan</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-instance-format -->
+<div style="counter-reset: section 9" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">IHE PHARM MEOW: TestPlan and Gherkin Demonstration, published by Jose Costa Teixeira. This guide is not an authorized publication; it is the continuous build for version 1.0.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/costateixeira/pharm-MEOW-test/tree/master'>https://github.com/costateixeira/pharm-MEOW-test/tree/master</a> and changes regularly. See the <a href='http://example.com/fhir/ihe.pharm.meow.test/history.html'>Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/costateixeira/pharm-MEOW-test/commit/825bd1d5f87c9a248b2e80604bcd930fe9ef3cff"><code>825bd1d5</code></a>.</span></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="TestPlan-meow-client-tests.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="TestPlan-meow-client-tests.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="TestPlan-meow-client-tests.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+
+<h2 id="root">: MEOW Consumer (Client) Test Plan</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+
+            as of 
+2026-08-26
+
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="TestPlan-meow-client-tests.ttl" no-download="true">Raw ttl</a> | <a href="TestPlan-meow-client-tests.ttl" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden"><code class="language-turtle">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/TestPlan/meow-client-tests&gt; a fhir:TestPlan ;
+  fhir:resourceDefinition http://hl7.org/fhir/StructureDefinition/TestPlan|0.1.0-snapshot1 ;
+  <a href="http://hl7.org/fhir/6.0.0-ballot5/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
+  <a href="http://hl7.org/fhir/6.0.0-ballot5/resource.html#XTestPlan.id">fhir:id</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#id">fhir:v</a> &quot;meow-client-tests&quot;] ; # 
+  <a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.url">fhir:url</a> [
+     <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#uri">fhir:v</a> &quot;http://example.com/fhir/ihe.pharm.meow.test/TestPlan/meow-client-tests&quot;^^xsd:anyURI ;
+     <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#uri">fhir:l</a> &lt;http://example.com/fhir/ihe.pharm.meow.test/TestPlan/meow-client-tests&gt;
+  ] ; # 
+  <a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.version">fhir:version</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;1.0.0&quot;] ; # 
+  <a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.name">fhir:name</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;MEOWClientTestPlan&quot;] ; # 
+  <a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.title">fhir:title</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;MEOW Consumer (Client) Test Plan&quot;] ; # 
+  <a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.status">fhir:status</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">fhir:v</a> &quot;draft&quot;] ; # 
+  <a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.experimental">fhir:experimental</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#boolean">fhir:v</a> true] ; # 
+  <a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.date">fhir:date</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#dateTime">fhir:v</a> &quot;2026-08-26&quot;^^xsd:date] ; # 
+  <a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;Jose Costa Teixeira&quot;] ; # 
+  <a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.contact">fhir:contact</a> ( [
+     <a href="http://hl7.org/fhir/6.0.0-ballot5/metadatatypes.html#ContactDetail#XContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;Jose Costa Teixeira&quot; ] ;
+     <a href="http://hl7.org/fhir/6.0.0-ballot5/metadatatypes.html#ContactDetail#XContactDetail.telecom">fhir:telecom</a> ( [
+       <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#ContactPoint#XContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">fhir:v</a> &quot;url&quot; ] ;
+       <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#ContactPoint#XContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;https://github.com/costateixeira/pharm-MEOW-test&quot; ]
+     ] )
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.description">fhir:description</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#markdown">fhir:v</a> &quot;Test plan for the **Medication Overview Consumer** actor (the *MEOW client*) defined by the\n[IHE PHARM Medication Overview (MEOW)](https://profiles.ihe.net/PHARM/MEOW/index.html) implementation guide.\n\nEach `suite.test` below corresponds to one `Scenario:` in the Gherkin feature file named by\n`suite.input.file`, matched by its `tc-meow-client-NNN` identifier. The system under test is the\n**client**: the SUT initiates every exchange, the test bed plays the Responder and judges what arrives.&quot;] ; # 
+  <a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.jurisdiction">fhir:jurisdiction</a> ( [
+     <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#CodeableConcept#XCodeableConcept.coding">fhir:coding</a> ( [
+       <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#Coding#XCoding.system">fhir:system</a> [
+         <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#uri">fhir:v</a> &quot;http://unstats.un.org/unsd/methods/m49/m49.htm&quot;^^xsd:anyURI ;
+         <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#uri">fhir:l</a> &lt;http://unstats.un.org/unsd/methods/m49/m49.htm&gt;
+       ] ;
+       <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#Coding#XCoding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">fhir:v</a> &quot;001&quot; ] ;
+       <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#Coding#XCoding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;World&quot; ]
+     ] )
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.purpose">fhir:purpose</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#markdown">fhir:v</a> &quot;To declare, in a machine-readable and runnable form, which behaviours a system claiming conformance to the MEOW Medication Overview Consumer actor must demonstrate.&quot;] ; # 
+  <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.scope">fhir:scope</a> ( [
+     <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.scope.reference">fhir:reference</a> [
+       <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#canonical">fhir:v</a> &quot;https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewConsumer&quot;^^xsd:anyURI ;
+       <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#canonical">fhir:l</a> &lt;https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewConsumer&gt;
+     ] ;
+     <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.scope.description">fhir:description</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;The Medication Overview Consumer (MEOW client) actor - the system under test.&quot; ]
+  ] ) ; # 
+  <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.runner">fhir:runner</a> [
+     <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#url">fhir:v</a> &quot;https://www.itb.ec.europa.eu/docs/guides/latest/&quot;^^xsd:anyURI ;
+     <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#url">fhir:l</a> &lt;https://www.itb.ec.europa.eu/docs/guides/latest/&gt;
+  ] ; # 
+  <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite">fhir:suite</a> ( [
+     <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.name">fhir:name</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;IHE MEOW Medication Overview Consumer - client-side conformance&quot; ] ;
+     <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.description">fhir:description</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;Maps to the Feature of the same name in the Gherkin script. The test bed plays the Medication Overview Responder while the system under test drives every exchange.&quot; ] ;
+     <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.input">fhir:input</a> ( [
+       <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.input.name">fhir:name</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;gherkin-script&quot; ] ;
+       <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.input.file">fhir:file</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;meow-client-gherkin-script.feature&quot; ]
+     ] ) ;
+     <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test">fhir:test</a> ( [
+       <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.name">fhir:name</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;tc-meow-client-001 PHARM-11 query by patient and by optional parameters&quot; ] ;
+       <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.description">fhir:description</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;Three rounds, each a separate exchange triggered on the SUT, proving the Consumer can build each query rather than build one and repeat it: by patient alone, then patient + status, then patient + _lastUpdated.&quot; ] ;
+       <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.operation">fhir:operation</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">fhir:v</a> &quot;gherkin/Scenario&quot; ] ;
+       <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">fhir:assertion</a> ( [
+         <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">fhir:severity</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">fhir:v</a> &quot;error&quot; ] ;
+         <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">fhir:human</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;Every PHARM-11 query the Consumer issues is a GET against /MedicationStatement carrying a patient parameter. A query without patient is non-conformant no matter what else it carries.&quot; ]
+       ] [
+         <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">fhir:severity</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">fhir:v</a> &quot;error&quot; ] ;
+         <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">fhir:human</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;The Consumer asks for FHIR JSON, via the Accept header or the _format query parameter.&quot; ]
+       ] [
+         <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">fhir:severity</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">fhir:v</a> &quot;error&quot; ] ;
+         <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">fhir:human</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;The optional search parameters the Consumer declares support for are built into the query itself - status and _lastUpdated narrow the search server-side, rather than the Consumer pulling everything and filtering locally.&quot; ]
+       ] )
+     ] [
+       <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.name">fhir:name</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;tc-meow-client-002 Submitted overview conforms to MedicationOverview&quot; ] ;
+       <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.description">fhir:description</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;MEOW defines no submit transaction - both CapabilityStatements are read/search only - so the endpoint is deployment-specific and only the payload is governed by the profile.&quot; ] ;
+       <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.operation">fhir:operation</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">fhir:v</a> &quot;gherkin/Scenario&quot; ] ;
+       <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">fhir:assertion</a> ( [
+         <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">fhir:severity</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">fhir:v</a> &quot;error&quot; ] ;
+         <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">fhir:human</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;The overview the Consumer submits is a POST carrying FHIR JSON.&quot; ]
+       ] [
+         <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">fhir:severity</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">fhir:v</a> &quot;error&quot; ] ;
+         <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">fhir:human</a> [ <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">fhir:v</a> &quot;The submitted Bundle validates against the MEOW MedicationOverview profile.&quot; ]
+       ] )
+     ] )
+  ] ) . # 
+
+</code></pre>
+
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/costateixeira/pharm-MEOW-test">Jose Costa Teixeira</a>.  
+          Package ihe.pharm.meow.test#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/6.0.0-ballot5/">FHIR 6.0.0-ballot5</a>.
+          Generated <span title="Mon, Aug 31, 2026 20:09+0000">2026-08-31</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

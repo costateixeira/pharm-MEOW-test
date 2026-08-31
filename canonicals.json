@@ -1,0 +1,21 @@
+[{
+  "id" : "ihe.pharm.meow.test",
+  "type" : "ImplementationGuide",
+  "url" : "http://example.com/fhir/ihe.pharm.meow.test/ImplementationGuide/ihe.pharm.meow.test",
+  "version" : "1.0.0",
+  "name" : "IHEPharmMEOWTesting"
+},
+{
+  "id" : "meow-client-tests",
+  "type" : "TestPlan",
+  "url" : "http://example.com/fhir/ihe.pharm.meow.test/TestPlan/meow-client-tests",
+  "version" : "1.0.0",
+  "name" : "MEOWClientTestPlan"
+},
+{
+  "id" : "meow-server-tests",
+  "type" : "TestPlan",
+  "url" : "http://example.com/fhir/ihe.pharm.meow.test/TestPlan/meow-server-tests",
+  "version" : "1.0.0",
+  "name" : "MEOWServerTestPlan"
+}]

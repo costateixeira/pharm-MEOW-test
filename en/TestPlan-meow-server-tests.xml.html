@@ -1,0 +1,439 @@
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MEOW Responder (Server) Test Plan - XML Representation - IHE PHARM MEOW: TestPlan and Gherkin Demonstration v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5.2"}
+    h3,h4,h5,h6{--heading-prefix:"5.2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">IHE PHARM MEOW: TestPlan and Gherkin Demonstration</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - 
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/6.0.0-ballot5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="testing.html">Testing</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Changes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MEOW Responder (Server) Test Plan</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-instance-format -->
+<div style="counter-reset: section 7" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">IHE PHARM MEOW: TestPlan and Gherkin Demonstration, published by Jose Costa Teixeira. This guide is not an authorized publication; it is the continuous build for version 1.0.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/costateixeira/pharm-MEOW-test/tree/master'>https://github.com/costateixeira/pharm-MEOW-test/tree/master</a> and changes regularly. See the <a href='http://example.com/fhir/ihe.pharm.meow.test/history.html'>Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/costateixeira/pharm-MEOW-test/commit/825bd1d5f87c9a248b2e80604bcd930fe9ef3cff"><code>825bd1d5</code></a>.</span></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="TestPlan-meow-server-tests.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li class="active">
+      <a href="#">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="TestPlan-meow-server-tests.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="TestPlan-meow-server-tests.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+
+<h2 id="root">: MEOW Responder (Server) Test Plan</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+
+            as of 
+2026-08-26
+
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="TestPlan-meow-server-tests.xml" no-download="true">Raw xml</a> | <a href="TestPlan-meow-server-tests.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="xml" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
+&lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan">TestPlan</a> xmlns=&quot;http://hl7.org/fhir&quot;
+          resourceDefinition=&quot;http://hl7.org/fhir/StructureDefinition/TestPlan|0.1.0-snapshot1&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/resource.html#XTestPlan.id">id</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#id">value</a>=&quot;meow-server-tests&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.url">url</a>
+       <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#uri">value</a>=&quot;http://example.com/fhir/ihe.pharm.meow.test/TestPlan/meow-server-tests&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.version">version</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;1.0.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.name">name</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;MEOWServerTestPlan&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.title">title</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;MEOW Responder (Server) Test Plan&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.status">status</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.experimental">experimental</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.date">date</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#dateTime">value</a>=&quot;2026-08-26&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.publisher">publisher</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;Jose Costa Teixeira&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/metadatatypes.html#ContactDetail#XContactDetail.name">name</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;Jose Costa Teixeira&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/metadatatypes.html#ContactDetail#XContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#ContactPoint#XContactPoint.system">system</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#ContactPoint#XContactPoint.value">value</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;https://github.com/costateixeira/pharm-MEOW-test&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/6.0.0-ballot5/metadatatypes.html#ContactDetail#XContactDetail.telecom">telecom</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.contact">contact</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.description">description</a>
+               <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#markdown">value</a>=&quot;Test plan for the **Medication Overview Responder** actor (the *MEOW server*) defined by the
+[IHE PHARM Medication Overview (MEOW)](https://profiles.ihe.net/PHARM/MEOW/index.html) implementation guide.
+
+The suites below are split one per transaction - PHARM-11 Query Medication Resources and PHARM-12
+Retrieve Medication Overview Document - matching the one-transaction-per-scenario structure of the
+Gherkin script. Each `suite.test` corresponds to one `Scenario:` in that script, matched by its
+`tc-meow-server-NNN` identifier.
+
+The system under test is the **server**: the test bed originates every request and asserts on the
+response it gets back.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.jurisdiction">jurisdiction</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#CodeableConcept#XCodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#Coding#XCoding.system">system</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#uri">value</a>=&quot;http://unstats.un.org/unsd/methods/m49/m49.htm&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#Coding#XCoding.code">code</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;001&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#Coding#XCoding.display">display</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;World&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#CodeableConcept#XCodeableConcept.coding">coding</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.jurisdiction">jurisdiction</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan.purpose">purpose</a>
+           <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#markdown">value</a>=&quot;To declare, in a machine-readable and runnable form, which behaviours a system claiming conformance to the MEOW Medication Overview Responder actor must demonstrate.&quot;/&gt;
+  &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.scope">scope</a>&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.scope.reference">reference</a>
+               <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#canonical">value</a>=&quot;https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewResponder&quot;/&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.scope.description">description</a>
+                 <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;The Medication Overview Responder (MEOW server) actor - the system under test.&quot;/&gt;
+  &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.scope">scope</a>&gt;
+  &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.runner">runner</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#url">value</a>=&quot;https://www.itb.ec.europa.eu/docs/guides/latest/&quot;/&gt;
+  &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.mode">mode</a>&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.mode.code">code</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;required&quot;/&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.mode.description">description</a>
+                 <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;Tests every Medication Overview Responder must pass.&quot;/&gt;
+  &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.mode">mode</a>&gt;
+  &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.mode">mode</a>&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.mode.code">code</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;document-option&quot;/&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.mode.description">description</a>
+                 <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;Tests that only apply to a Responder claiming the Document Option (PHARM-12).&quot;/&gt;
+  &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.mode">mode</a>&gt;
+  &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite">suite</a>&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.name">name</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;PHARM-11 Query Medication Resources&quot;/&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.description">description</a>
+                 <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;Search on MedicationStatement, profiled as MedicationTreatmentLine. The patient parameter is required; status, effective, category and _lastUpdated are optional.&quot;/&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.mode">mode</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;required&quot;/&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.input">input</a>&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.input.name">name</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;gherkin-script&quot;/&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.input.file">file</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;meow-server-gherkin-script.feature&quot;/&gt;
+    &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.input">input</a>&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test">test</a>&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.name">name</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;tc-meow-server-001 PHARM-11 query by patient&quot;/&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.description">description</a>
+                   <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;The required baseline: a patient-scoped search returns that patient's treatment lines.&quot;/&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.operation">operation</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;gherkin/Scenario&quot;/&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">severity</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;error&quot;/&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">human</a>
+               <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;The response is 200 and a Bundle of type searchset with at least one entry.&quot;/&gt;
+      &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">severity</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;error&quot;/&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">human</a>
+               <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;Every entry is a MedicationStatement whose subject resolves to the requested patient.&quot;/&gt;
+      &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">severity</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;error&quot;/&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">human</a>
+               <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;Every entry declares the MedicationTreatmentLine profile in meta.profile.&quot;/&gt;
+      &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+    &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test">test</a>&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test">test</a>&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.name">name</a>
+            <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;tc-meow-server-002 PHARM-11 honours the optional search parameters&quot;/&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.description">description</a>
+                   <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;status, category and _lastUpdated actually filter server-side rather than being ignored.&quot;/&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.operation">operation</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;gherkin/Scenario&quot;/&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">severity</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;error&quot;/&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">human</a>
+               <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;A search filtered by status=active returns 200 and every entry carries that status.&quot;/&gt;
+      &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">severity</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;warning&quot;/&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">human</a>
+               <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;A search filtered by category returns 200 and a searchset.&quot;/&gt;
+      &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">severity</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;error&quot;/&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">human</a>
+               <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;A search with _lastUpdated set in the future returns 200 and an empty searchset - proof the parameter is applied rather than ignored.&quot;/&gt;
+      &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+    &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test">test</a>&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test">test</a>&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.name">name</a>
+            <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;tc-meow-server-003 PHARM-11 rejects a query without the required patient&quot;/&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.description">description</a>
+                   <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;Negative test: an unscoped MedicationStatement search must be refused, not answered.&quot;/&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.operation">operation</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;gherkin/Scenario&quot;/&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">severity</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;error&quot;/&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">human</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;The response status is 400.&quot;/&gt;
+      &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">severity</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;error&quot;/&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">human</a>
+               <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;The body is an OperationOutcome carrying at least one issue of severity error or fatal.&quot;/&gt;
+      &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+    &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test">test</a>&gt;
+  &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite">suite</a>&gt;
+  &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite">suite</a>&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.name">name</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;PHARM-12 Retrieve Medication Overview Document&quot;/&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.description">description</a>
+                 <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;Document Option. Search for and read a Medication Overview document Bundle, then validate it against the MedicationOverview profile.&quot;/&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.mode">mode</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;document-option&quot;/&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.input">input</a>&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.input.name">name</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;gherkin-script&quot;/&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.input.file">file</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;meow-server-gherkin-script.feature&quot;/&gt;
+    &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.input">input</a>&gt;
+    &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test">test</a>&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.name">name</a>
+            <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;tc-meow-server-004 PHARM-12 returns a conformant MedicationOverview&quot;/&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.description">description</a>
+                   <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;A document search returns document Bundles, and a document read returns one that validates against the profile.&quot;/&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.operation">operation</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;gherkin/Scenario&quot;/&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">severity</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;error&quot;/&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">human</a>
+               <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;A search with patient and type=document returns 200 and a searchset whose entries are all Bundles of type document.&quot;/&gt;
+      &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">severity</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;error&quot;/&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">human</a>
+               <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;Reading a Medication Overview document returns 200 and a Bundle of type document.&quot;/&gt;
+      &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">severity</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;error&quot;/&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">human</a>
+               <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;The retrieved document validates against the MEOW MedicationOverview profile.&quot;/&gt;
+      &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+      &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.severity">severity</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;error&quot;/&gt;
+        &lt;<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion.human">human</a>
+               <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;The document holds exactly one Composition, plus a Patient and at least one MedicationStatement.&quot;/&gt;
+      &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test.assertion">assertion</a>&gt;
+    &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite.test">test</a>&gt;
+  &lt;/<a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/StructureDefinition-TestPlan.html#TestPlan.suite">suite</a>&gt;
+&lt;/<a href="http://hl7.org/fhir/6.0.0-ballot5/canonicalresource.html#XTestPlan">TestPlan</a>&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/costateixeira/pharm-MEOW-test">Jose Costa Teixeira</a>.  
+          Package ihe.pharm.meow.test#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/6.0.0-ballot5/">FHIR 6.0.0-ballot5</a>.
+          Generated <span title="Mon, Aug 31, 2026 20:09+0000">2026-08-31</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,339 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Testing - IHE PHARM MEOW: TestPlan and Gherkin Demonstration v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">IHE PHARM MEOW: TestPlan and Gherkin Demonstration</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - 
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/6.0.0-ballot5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="testing.html">Testing</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Changes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Testing</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">IHE PHARM MEOW: TestPlan and Gherkin Demonstration, published by Jose Costa Teixeira. This guide is not an authorized publication; it is the continuous build for version 1.0.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/costateixeira/pharm-MEOW-test/tree/master'>https://github.com/costateixeira/pharm-MEOW-test/tree/master</a> and changes regularly. See the <a href='http://example.com/fhir/ihe.pharm.meow.test/history.html'>Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/costateixeira/pharm-MEOW-test/commit/825bd1d5f87c9a248b2e80604bcd930fe9ef3cff"><code>825bd1d5</code></a>.</span></p><!--EndReleaseHeader-->
+  <h2>Testing</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#testing-the-meow-actors" id="markdown-toc-testing-the-meow-actors">Testing the MEOW actors</a></li>
+  <li><a href="#the-test-plans" id="markdown-toc-the-test-plans">The test plans</a></li>
+  <li><a href="#the-gherkin-feature-file" id="markdown-toc-the-gherkin-feature-file">The Gherkin feature file</a></li>
+</ul>
+
+</div>
+<p><a name="scope"> </a></p>
+
+<h3 id="testing-the-meow-actors">Testing the MEOW actors</h3>
+
+<p>This guide declares its tests using the <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/en/StructureDefinition-TestPlan.html">TestPlan</a> resource, which comes from the <a href="https://build.fhir.org/ig/HL7/fhir-testing-ig/en/">FHIR Testing IG</a> (package <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.testing</code>).</p>
+
+<p>TestPlan is not in the core specification. It was part of R6 core up to <code class="language-plaintext highlighter-rouge">6.0.0-ballot3</code>, but was taken out again for <code class="language-plaintext highlighter-rouge">6.0.0-ballot5</code> — the version this guide is built on. TestPlan, TestScript and TestReport now live only in the FHIR Testing IG, which carries <em>"the latest definitions of the R6 resources until they are considered stable"</em>. Depending on that package is therefore the only way to have a TestPlan at all:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">dependencies</span><span class="pi">:</span>
+  <span class="na">hl7.fhir.uv.testing</span><span class="pi">:</span> <span class="s">current</span>
+</code></pre></div></div>
+
+<blockquote class="stu-note">
+<strong>This is a demonstration artifact.</strong>
+The test plans below are samples showing how the mechanism works. They are not approved
+IHE test specifications, and the assertions have not been executed against any real system.
+</blockquote>
+
+<p><a name="plan"> </a></p>
+
+<h3 id="the-test-plans">The test plans</h3>
+
+<p>There is one test plan per MEOW actor. Each <code class="language-plaintext highlighter-rouge">scope</code> names the actor's CapabilityStatement — <em>what is under test</em> — rather than the profiles the tests happen to touch; those appear in the assertions instead.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Test plan</th>
+      <th>Actor under test</th>
+      <th>Covers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="TestPlan-meow-client-tests.html">MEOW Consumer (Client) Test Plan</a></td>
+      <td><a href="https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement-MedicationOverviewConsumer.html">Medication Overview Consumer</a></td>
+      <td>The client builds conformant PHARM-11 queries, and any overview it submits conforms to the profile.</td>
+    </tr>
+    <tr>
+      <td><a href="TestPlan-meow-server-tests.html">MEOW Responder (Server) Test Plan</a></td>
+      <td><a href="https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement-MedicationOverviewResponder.html">Medication Overview Responder</a></td>
+      <td>The server answers PHARM-11 correctly, refuses an unscoped query, and returns a conformant document for PHARM-12.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The two are mirror images: for the client the system under test initiates every exchange and the test bed plays the Responder; for the server the test bed originates every request and asserts on the response it gets back.</p>
+
+<p>The Responder plan splits its tests into one suite per transaction — PHARM-11 and PHARM-12 — matching the one-transaction-per-scenario structure of its Gherkin script. The PHARM-12 suite is marked with the <code class="language-plaintext highlighter-rouge">document-option</code> mode, so a Responder that does not claim the Document Option skips it:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mode</th>
+      <th>Applies to</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">required</code></td>
+      <td>Every Medication Overview Responder.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">document-option</code></td>
+      <td>Responders claiming the Document Option (PHARM-12).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">runner</code> names the tool that executes the tests — here the <a href="https://www.itb.ec.europa.eu/docs/guides/latest/">Interoperability Test Bed</a>.</p>
+
+<p><a name="gherkin"> </a></p>
+
+<h3 id="the-gherkin-feature-file">The Gherkin feature file</h3>
+
+<p>The executable test cases are written in <a href="https://cucumber.io/docs/gherkin/">Gherkin</a> and live in the IG source under <code class="language-plaintext highlighter-rouge">input/testing/gherkin/</code> — one feature file per actor, <code class="language-plaintext highlighter-rouge">meow-client-gherkin-script.feature</code> and <code class="language-plaintext highlighter-rouge">meow-server-gherkin-script.feature</code>.</p>
+
+<p>The feature file ships <strong>as Gherkin, not as a FHIR resource</strong>. The <code class="language-plaintext highlighter-rouge">path-test</code> parameter mirrors the test tree into the published package:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package/tests/gherkin/meow-client-gherkin-script.feature
+package/tests/gherkin/meow-server-gherkin-script.feature
+</code></pre></div></div>
+
+<p>That is what a test runner consumes. The TestPlan points at it from <code class="language-plaintext highlighter-rouge">suite.input.file</code>, and the runner resolves that name against the package's test root:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* suite
+  * input
+    * name = "gherkin-script"
+    * file = "meow-client-gherkin-script.feature"
+</code></pre></div></div>
+
+<p>Each <code class="language-plaintext highlighter-rouge">suite.test</code> corresponds to one <code class="language-plaintext highlighter-rouge">Scenario:</code> in that feature file, matched by its <code class="language-plaintext highlighter-rouge">tc-meow-client-NNN</code> / <code class="language-plaintext highlighter-rouge">tc-meow-server-NNN</code> identifier. The TestPlan carries the planning view — what is in scope, what must hold for a test to pass — while the feature file carries the steps the runner executes.</p>
+
+<p><a name="rendering"> </a></p>
+
+<h4 id="rendering-the-script-on-this-site">Rendering the script on this site</h4>
+
+<p>The raw <code class="language-plaintext highlighter-rouge">.feature</code> file travels in the package but is not browsable on the IG website. To also show it here, the script is additionally carried as a <code class="language-plaintext highlighter-rouge">Binary</code> whose <code class="language-plaintext highlighter-rouge">data</code> uses the publisher's <code class="language-plaintext highlighter-rouge">ig-loader-</code> prefix to inline the file's contents at build time:</p>
+
+<blockquote>
+  <p><strong><a href="Binary-meow-client-gherkin-script.html">MEOW Client Gherkin Script</a></strong></p>
+
+  <p><strong><a href="Binary-meow-server-gherkin-script.html">MEOW Server Gherkin Script</a></strong></p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Instance: meow-client-gherkin-script
+InstanceOf: Binary
+Usage: #definition
+* language = #en
+* contentType = #text/x-gherkin
+* data = "ig-loader-meow-client-gherkin-script.feature"
+</code></pre></div></div>
+
+<p>For it to render as highlighted Gherkin rather than as raw data, the IG's entry for that Binary carries the <code class="language-plaintext highlighter-rouge">implementationguide-resource-format</code> extension, after which the renderer emits <code class="language-plaintext highlighter-rouge">&lt;pre class="gherkin language-gherkin"&gt;</code> for the template's Prism.js to highlight.</p>
+
+<p>These Binaries are presentational only. Nothing in either TestPlan references them — the link is the filename alone — and removing them would cost these rendered pages and nothing else.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/costateixeira/pharm-MEOW-test">Jose Costa Teixeira</a>.  
+          Package ihe.pharm.meow.test#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/6.0.0-ballot5/">FHIR 6.0.0-ballot5</a>.
+          Generated <span title="Mon, Aug 31, 2026 20:09+0000">2026-08-31</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

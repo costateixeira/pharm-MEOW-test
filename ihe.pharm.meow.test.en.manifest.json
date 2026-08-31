@@ -1,0 +1,7 @@
+{
+  "version" : "1.0.0",
+  "fhirVersion" : ["6.0.0-ballot5"],
+  "date" : "20260831200909",
+  "name" : "ihe.pharm.meow.test",
+  "jurisdiction" : "http://unstats.un.org/unsd/methods/m49/m49.htm#001"
+}

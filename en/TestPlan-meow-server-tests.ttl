@@ -1,0 +1,143 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.com/fhir/ihe.pharm.meow.test/TestPlan/meow-server-tests> a fhir:TestPlan ;
+  fhir:resourceDefinition http://hl7.org/fhir/StructureDefinition/TestPlan|0.1.0-snapshot1 ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "meow-server-tests"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: TestPlan meow-server-tests</b></p><a name=\"meow-server-tests\"> </a><a name=\"hcmeow-server-tests\"> </a><p><b>Scopes</b></p><table class=\"grid\"><tr><td><b>Reference</b></td><td><b>Description</b></td></tr><tr><td><code>https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewResponder</code></td><td>The Medication Overview Responder (MEOW server) actor - the system under test.</td></tr></table><p><b>Modes</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Description</b></td></tr><tr><td>required</td><td>Tests every Medication Overview Responder must pass.</td></tr><tr><td>document-option</td><td>Tests that only apply to a Responder claiming the Document Option (PHARM-12).</td></tr></table><p><b>1 Suite: PHARM-11 Query Medication Resources</b></p><p>Mode: required. Search on MedicationStatement, profiled as MedicationTreatmentLine. The patient parameter is required; status, effective, category and _lastUpdated are optional.</p><p><b>Inputs</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>File</b></td></tr><tr><td>gherkin-script</td><td>meow-server-gherkin-script.feature</td></tr></table><p><b>Tests</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Description</b></td><td><b>Operation</b></td></tr><tr><td>tc-meow-server-001 PHARM-11 query by patient</td><td>The required baseline: a patient-scoped search returns that patient's treatment lines.</td><td>gherkin/Scenario</td></tr><tr><td>tc-meow-server-002 PHARM-11 honours the optional search parameters</td><td>status, category and _lastUpdated actually filter server-side rather than being ignored.</td><td>gherkin/Scenario</td></tr><tr><td>tc-meow-server-003 PHARM-11 rejects a query without the required patient</td><td>Negative test: an unscoped MedicationStatement search must be refused, not answered.</td><td>gherkin/Scenario</td></tr></table><hr/><p><b>2 Suite: PHARM-12 Retrieve Medication Overview Document</b></p><p>Mode: document-option. Document Option. Search for and read a Medication Overview document Bundle, then validate it against the MedicationOverview profile.</p><p><b>Inputs</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>File</b></td></tr><tr><td>gherkin-script</td><td>meow-server-gherkin-script.feature</td></tr></table><p><b>Tests</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Description</b></td><td><b>Operation</b></td></tr><tr><td>tc-meow-server-004 PHARM-12 returns a conformant MedicationOverview</td><td>A document search returns document Bundles, and a document read returns one that validates against the profile.</td><td>gherkin/Scenario</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://example.com/fhir/ihe.pharm.meow.test/TestPlan/meow-server-tests"^^xsd:anyURI ;
+     fhir:l <http://example.com/fhir/ihe.pharm.meow.test/TestPlan/meow-server-tests>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "MEOWServerTestPlan"] ; # 
+  fhir:title [ fhir:v "MEOW Responder (Server) Test Plan"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2026-08-26"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "Jose Costa Teixeira"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Jose Costa Teixeira" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://github.com/costateixeira/pharm-MEOW-test" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Test plan for the **Medication Overview Responder** actor (the *MEOW server*) defined by the\n[IHE PHARM Medication Overview (MEOW)](https://profiles.ihe.net/PHARM/MEOW/index.html) implementation guide.\n\nThe suites below are split one per transaction - PHARM-11 Query Medication Resources and PHARM-12\nRetrieve Medication Overview Document - matching the one-transaction-per-scenario structure of the\nGherkin script. Each `suite.test` corresponds to one `Scenario:` in that script, matched by its\n`tc-meow-server-NNN` identifier.\n\nThe system under test is the **server**: the test bed originates every request and asserts on the\nresponse it gets back."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "To declare, in a machine-readable and runnable form, which behaviours a system claiming conformance to the MEOW Medication Overview Responder actor must demonstrate."] ; # 
+  fhir:scope ( [
+     fhir:reference [
+       fhir:v "https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewResponder"^^xsd:anyURI ;
+       fhir:l <https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewResponder>
+     ] ;
+     fhir:description [ fhir:v "The Medication Overview Responder (MEOW server) actor - the system under test." ]
+  ] ) ; # 
+  fhir:runner [
+     fhir:v "https://www.itb.ec.europa.eu/docs/guides/latest/"^^xsd:anyURI ;
+     fhir:l <https://www.itb.ec.europa.eu/docs/guides/latest/>
+  ] ; # 
+  fhir:mode ( [
+     fhir:code [ fhir:v "required" ] ;
+     fhir:description [ fhir:v "Tests every Medication Overview Responder must pass." ]
+  ] [
+     fhir:code [ fhir:v "document-option" ] ;
+     fhir:description [ fhir:v "Tests that only apply to a Responder claiming the Document Option (PHARM-12)." ]
+  ] ) ; # 
+  fhir:suite ( [
+     fhir:name [ fhir:v "PHARM-11 Query Medication Resources" ] ;
+     fhir:description [ fhir:v "Search on MedicationStatement, profiled as MedicationTreatmentLine. The patient parameter is required; status, effective, category and _lastUpdated are optional." ] ;
+     fhir:mode [ fhir:v "required" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "gherkin-script" ] ;
+       fhir:file [ fhir:v "meow-server-gherkin-script.feature" ]
+     ] ) ;
+     fhir:test ( [
+       fhir:name [ fhir:v "tc-meow-server-001 PHARM-11 query by patient" ] ;
+       fhir:description [ fhir:v "The required baseline: a patient-scoped search returns that patient's treatment lines." ] ;
+       fhir:operation [ fhir:v "gherkin/Scenario" ] ;
+       fhir:assertion ( [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "The response is 200 and a Bundle of type searchset with at least one entry." ]
+       ] [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Every entry is a MedicationStatement whose subject resolves to the requested patient." ]
+       ] [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Every entry declares the MedicationTreatmentLine profile in meta.profile." ]
+       ] )
+     ] [
+       fhir:name [ fhir:v "tc-meow-server-002 PHARM-11 honours the optional search parameters" ] ;
+       fhir:description [ fhir:v "status, category and _lastUpdated actually filter server-side rather than being ignored." ] ;
+       fhir:operation [ fhir:v "gherkin/Scenario" ] ;
+       fhir:assertion ( [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "A search filtered by status=active returns 200 and every entry carries that status." ]
+       ] [
+         fhir:severity [ fhir:v "warning" ] ;
+         fhir:human [ fhir:v "A search filtered by category returns 200 and a searchset." ]
+       ] [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "A search with _lastUpdated set in the future returns 200 and an empty searchset - proof the parameter is applied rather than ignored." ]
+       ] )
+     ] [
+       fhir:name [ fhir:v "tc-meow-server-003 PHARM-11 rejects a query without the required patient" ] ;
+       fhir:description [ fhir:v "Negative test: an unscoped MedicationStatement search must be refused, not answered." ] ;
+       fhir:operation [ fhir:v "gherkin/Scenario" ] ;
+       fhir:assertion ( [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "The response status is 400." ]
+       ] [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "The body is an OperationOutcome carrying at least one issue of severity error or fatal." ]
+       ] )
+     ] )
+  ] [
+     fhir:name [ fhir:v "PHARM-12 Retrieve Medication Overview Document" ] ;
+     fhir:description [ fhir:v "Document Option. Search for and read a Medication Overview document Bundle, then validate it against the MedicationOverview profile." ] ;
+     fhir:mode [ fhir:v "document-option" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "gherkin-script" ] ;
+       fhir:file [ fhir:v "meow-server-gherkin-script.feature" ]
+     ] ) ;
+     fhir:test ( [
+       fhir:name [ fhir:v "tc-meow-server-004 PHARM-12 returns a conformant MedicationOverview" ] ;
+       fhir:description [ fhir:v "A document search returns document Bundles, and a document read returns one that validates against the profile." ] ;
+       fhir:operation [ fhir:v "gherkin/Scenario" ] ;
+       fhir:assertion ( [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "A search with patient and type=document returns 200 and a searchset whose entries are all Bundles of type document." ]
+       ] [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Reading a Medication Overview document returns 200 and a Bundle of type document." ]
+       ] [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "The retrieved document validates against the MEOW MedicationOverview profile." ]
+       ] [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "The document holds exactly one Composition, plus a Patient and at least one MedicationStatement." ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

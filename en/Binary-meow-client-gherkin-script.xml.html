@@ -1,0 +1,265 @@
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MEOW Client Gherkin Script - XML Representation - IHE PHARM MEOW: TestPlan and Gherkin Demonstration v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5.3"}
+    h3,h4,h5,h6{--heading-prefix:"5.3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">IHE PHARM MEOW: TestPlan and Gherkin Demonstration</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - 
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/6.0.0-ballot5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="testing.html">Testing</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Changes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MEOW Client Gherkin Script</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-instance-format -->
+<div style="counter-reset: section 7" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">IHE PHARM MEOW: TestPlan and Gherkin Demonstration, published by Jose Costa Teixeira. This guide is not an authorized publication; it is the continuous build for version 1.0.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/costateixeira/pharm-MEOW-test/tree/master'>https://github.com/costateixeira/pharm-MEOW-test/tree/master</a> and changes regularly. See the <a href='http://example.com/fhir/ihe.pharm.meow.test/history.html'>Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/costateixeira/pharm-MEOW-test/commit/825bd1d5f87c9a248b2e80604bcd930fe9ef3cff"><code>825bd1d5</code></a>.</span></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Binary-meow-client-gherkin-script.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li class="active">
+      <a href="#">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Binary-meow-client-gherkin-script.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Binary-meow-client-gherkin-script.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+
+<h2 id="root">: MEOW Client Gherkin Script</h2>
+
+
+<p><a href="Binary-meow-client-gherkin-script.xml" no-download="true">Raw xml</a> | <a href="Binary-meow-client-gherkin-script.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="xml" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
+&lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/binary.html#XBinary">Binary</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/resource.html#XBinary.id">id</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;meow-client-gherkin-script&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/resource.html#XBinary.language">language</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;en&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/binary.html#XBinary.contentType">contentType</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;text/x-gherkin&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/binary.html#XBinary.data">data</a>
+        <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#base64Binary">value</a>=&quot;RmVhdHVyZTogSUhFIE1FT1cgTWVkaWNhdGlvbiBPdmVydmlldyBDb25zdW1lciDigJQgY2xpZW50LXNpZGUgY29uZm9ybWFuY2UKICBUZXN0cyBhIE1FT1cgKmNsaWVudCogKHRoZSBNZWRpY2F0aW9uIE92ZXJ2aWV3IENvbnN1bWVyIGFjdG9yKSwgbm90IGEgUVIKICBwaXBlbGluZS4gVGhlIFNVVCBpbml0aWF0ZXMgZXZlcnkgZXhjaGFuZ2U7IElUQiBwbGF5cyB0aGUgUmVzcG9uZGVyIGFuZAogIGp1ZGdlcyB3aGF0IGFycml2ZXMuCgogICAgdGMtbWVvdy1jbGllbnQtMDAxICBRVUVSWSAg4oCUIHRoZSBDb25zdW1lciBtdXN0IGJlIGFibGUgdG8gcXVlcnkgYnkKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcGF0aWVudCAocmVxdWlyZWQpIGFuZCBieSB0aGUgb3B0aW9uYWwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc2VhcmNoIHBhcmFtZXRlcnMgaXQgZGVjbGFyZXMgc3VwcG9ydCBmb3IuCiAgICB0Yy1tZW93LWNsaWVudC0wMDIgIFNVQk1JVCDigJQgd2hhdGV2ZXIgTWVkaWNhdGlvbiBPdmVydmlldyB0aGUgQ29uc3VtZXIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3VibWl0cyBtdXN0IGNvbmZvcm0gdG8gdGhlIE1FT1cKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTWVkaWNhdGlvbk92ZXJ2aWV3IHByb2ZpbGUuCgogIEFjdG9ycyBhcmUgbmFtZWQgYWZ0ZXIgdGhlIHJlYWwgQ2FwYWJpbGl0eVN0YXRlbWVudHMgaW4gaWhlLnBoYXJtLm1lb3c6CiAgICBodHRwczovL3Byb2ZpbGVzLmloZS5uZXQvUEhBUk0vTUVPVy9DYXBhYmlsaXR5U3RhdGVtZW50L01lZGljYXRpb25PdmVydmlld0NvbnN1bWVyCiAgICBodHRwczovL3Byb2ZpbGVzLmloZS5uZXQvUEhBUk0vTUVPVy9DYXBhYmlsaXR5U3RhdGVtZW50L01lZGljYXRpb25PdmVydmlld1Jlc3BvbmRlcgoKICBDb25zdW1lciBzZWFyY2ggcGFyYW1ldGVycyBwZXIgdGhhdCBDYXBhYmlsaXR5U3RhdGVtZW50IChtb2RlOiBjbGllbnQpLAogIG9uIE1lZGljYXRpb25TdGF0ZW1lbnQgLyBQSEFSTS0xMSwgcHJvZmlsZWQgYXMgTWVkaWNhdGlvblRyZWF0bWVudExpbmU6CiAgICBwYXRpZW50ICAgICAgICByZWZlcmVuY2UgIFJFUVVJUkVEIOKAlCB0aGUgcGF0aWVudCB3aG9zZSBvdmVydmlldyBpcyB3YW50ZWQKICAgIHN0YXR1cyAgICAgICAgIHRva2VuICAgICAgZmlsdGVyIGJ5IHRyZWF0bWVudCBsaW5lIHN0YXR1cwogICAgZWZmZWN0aXZlICAgICAgZGF0ZSAgICAgICBmaWx0ZXIgYnkgZWZmZWN0aXZlIHBlcmlvZCBvZiB0aGUgdHJlYXRtZW50IGxpbmUKICAgIGNhdGVnb3J5ICAgICAgIHRva2VuICAgICAgZmlsdGVyIGJ5IG1lZGljYXRpb24gbGlzdCBjYXRlZ29yeSAvIGxpc3QgdHlwZQogICAgX2xhc3RVcGRhdGVkICAgZGF0ZSAgICAgICBpbmNyZW1lbnRhbCBzeW5jCgogICMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgIyBSRUFEIFRISVMgQkVGT1JFIFRIRSBGSVJTVCBSVU4g4oCUIG9uZSB0aGluZyB0byBjYWxpYnJhdGUKICAjID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICMgQm90aCBzY2VuYXJpb3MgcmVhZCB0aGUgcmVxdWVzdCB0aGUgU1VUIHNlbnQsIHZpYSAkbGFzdFJlY2VpdmVkey4uLn0uCiAgIyBObyBnZW5lcmF0ZWQgc3VpdGUgYW55d2hlcmUgaW4gdGhpcyBlY29zeXN0ZW0gaGFzIHVzZWQgYSA8cmVjZWl2ZT4KICAjIHN0ZXAgYmVmb3JlLCBzbyB0aGUgRklFTEQgTkFNRVMgYmVsb3cgYXJlIHRoZSBleHBlY3RlZCBIdHRwTWVzc2FnaW5nVjIKICAjIHJlY2VpdmUgb3V0cHV0cyDigJQgbm90IG5hbWVzIG9ic2VydmVkIG9uIGEgcnVubmluZyBJVEIuCiAgIwogICMgSWYgYW4gYXNzZXJ0aW9uIGZhaWxzIHdpdGggYW4gRU1QVFkgYWN0dWFsIHZhbHVlLCB0aGUgZmllbGQgbmFtZSBpcwogICMgd3JvbmcsIG5vdCB0aGUgU1VULiBFdmVyeSByZXF1ZXN0LXNoYXBlIGFzc2VydGlvbiBpbiB0aGlzIGZpbGUgcmVhZHMKICAjIGBsYXN0UmVjZWl2ZWR7cGF0aH1gLCBgbGFzdFJlY2VpdmVke21ldGhvZH1gLCBgbGFzdFJlY2VpdmVke2JvZHl9YCBvcgogICMgYGxhc3RSZWNlaXZlZHtoZWFkZXJzfXsuLi59YCDigJQgZGVsaWJlcmF0ZWx5IG9uZSBzbWFsbCBzZXQsIHNvIGEKICAjIHJlbmFtZSBpcyBhIGZpbmQtYW5kLXJlcGxhY2UuIExpa2VseSBhbHRlcm5hdGl2ZXMgdG8gdHJ5OgogICMgICB7cGF0aH0gICAgLT4ge3VyaX0gfCB7cmVxdWVzdFVSSX0gfCB7dGFyZ2V0fQogICMgICB7aGVhZGVyc30gLT4ge2hlYWRlcn0KICAjIFRoaXMgd29ya3MgYmVjYXVzZSB0aGUgZ2VuZXJpYyBhc3NlcnRpb24gaW50ZXJwb2xhdGVzIHdoYXRldmVyIHNpdHMKICAjIGluc2lkZSB0aGUgcXVvdGVzIGFzIGEgVERMIHZhcmlhYmxlIHBhdGg6ICJsYXN0UmVjZWl2ZWR7bWV0aG9kfSIKICAjIGNvbXBpbGVzIHRvICRsYXN0UmVjZWl2ZWR7bWV0aG9kfS4gTm8gZW4ueW1sIGNoYW5nZSBpcyBuZWVkZWQgdG8KICAjIHJldGFyZ2V0IGl0LgogICMKICAjIEFsc28gbm90ZTogSVRCIGRvZXMgTk9UIHJlcGx5LiBUaGUgY29tcGlsZXIgZW1pdHMgbm8gPGJ0eG4+LzxldHhuPiwKICAjIHNvIG5vdGhpbmcgY2FuIGJlIHNlbnQgYmFjayBvbiB0aGUgc2FtZSBleGNoYW5nZSDigJQgdGhlIENvbnN1bWVyIHNlZXMKICAjIGEgdGltZW91dCBhZnRlciBJVEIgaGFzIGluc3BlY3RlZCBpdHMgcmVxdWVzdC4gVGhlIHJlcXVlc3QgYXNzZXJ0aW9ucwogICMgYXJlIHVuYWZmZWN0ZWQ7IHRoZSBDb25zdW1lciBqdXN0IGdldHMgbm8gZGF0YS4KCiAgQmFja2dyb3VuZDoKICAgIEdpdmVuIE1lZGljYXRpb25PdmVydmlld0NvbnN1bWVyIGlzIHRoZSBzeXN0ZW0gdW5kZXIgdGVzdCBhcyBkZWZpbmVkIGJ5ICJodHRwczovL3Byb2ZpbGVzLmloZS5uZXQvUEhBUk0vTUVPVy9DYXBhYmlsaXR5U3RhdGVtZW50L01lZGljYXRpb25PdmVydmlld0NvbnN1bWVyIgogICAgIyBJVEIgc2ltdWxhdGVzIHRoZSBSZXNwb25kZXIuIFBvaW50IHRoZSBDb25zdW1lcidzIEZISVIgYmFzZSBVUkwgYXQKICAgICMgdGhlIGVuZHBvaW50IElUQiBhZHZlcnRpc2VzIGZvciB0aGlzIGFjdG9yLgogICAgQW5kIE1lZGljYXRpb25PdmVydmlld1Jlc3BvbmRlciBpcyBpbmZyYXN0cnVjdHVyZSBhcyBkZWZpbmVkIGJ5ICJodHRwczovL3Byb2ZpbGVzLmloZS5uZXQvUEhBUk0vTUVPVy9DYXBhYmlsaXR5U3RhdGVtZW50L01lZGljYXRpb25PdmVydmlld1Jlc3BvbmRlciIKICAgICMgR0lUQi1jb21wYXRpYmxlIEZISVIgdmFsaWRhdG9yICh2YWxpZGF0b3JfY2xpLmphcikg4oCUIGV4cG9zZXMKICAgICMgL2l0Yi97aWdNYW5hZ2VyLHRyYW5zZm9ybSxsb2FkUmVzb3VyY2UsZmhpcixmaGlyUGF0aH0vcHJvY2Vzcy4KICAgICMgU2FtZSBhY3RvciB0aGUgUkFDU0VMIHRyYWNrIGZlYXR1cmVzIHVzZS4KICAgIEFuZCBGSElSVmFsaWRhdG9yIGlzIGluZnJhc3RydWN0dXJlIGF0ICJodHRwOi8vZmhpci12YWxpZGF0b3I6ODA4MCIKCiAgIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAjIDEuIFFVRVJZIOKAlCBieSBwYXRpZW50LCB0aGVuIGJ5IHRoZSBvcHRpb25hbCBwYXJhbWV0ZXJzCiAgIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAjIFRocmVlIHJvdW5kcy4gRWFjaCBpcyBhIHNlcGFyYXRlIGV4Y2hhbmdlIHRoZSBvcGVyYXRvciB0cmlnZ2VycyBvbgogICMgdGhlIFNVVCwgc28gdGhlIHRlc3QgcHJvdmVzIHRoZSBDb25zdW1lciBjYW4gYWN0dWFsbHkgKmJ1aWxkKiBlYWNoCiAgIyBxdWVyeSDigJQgbm90IG1lcmVseSB0aGF0IGl0IGNhbiBidWlsZCBvbmUgYW5kIHJlcGVhdCBpdC4KICBTY2VuYXJpbzogdGMtbWVvdy1jbGllbnQtMDAxIFBIQVJNLTExIHF1ZXJ5IGJ5IHBhdGllbnQgYW5kIGJ5IG9wdGlvbmFsIHBhcmFtZXRlcnMKCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgIyBST1VORCAxIOKAlCB0aGUgbWFuZGF0b3J5IGJhc2VsaW5lOiBxdWVyeSBieSBwYXRpZW50IGFsb25lLgogICAgIyBBIFBIQVJNLTExIHF1ZXJ5IHdpdGhvdXQgYHBhdGllbnRgIGlzIG5vbi1jb25mb3JtYW50IG5vIG1hdHRlciB3aGF0CiAgICAjIGVsc2UgaXQgY2Fycmllcywgc28gdGhpcyByb3VuZCBpcyB0aGUgb25lIHRoYXQgbXVzdCBuZXZlciBiZQogICAgIyByZWxheGVkLgogICAgIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIEdpdmVuIE1lZGljYXRpb25PdmVydmlld0NvbnN1bWVyIGlzIGluZm9ybWVkICJST1VORCAxIG9mIDMg4oCUIHF1ZXJ5IHRoZSBSZXNwb25kZXIgZm9yIHRoZSB0ZXN0IHBhdGllbnQncyBtZWRpY2F0aW9uIG92ZXJ2aWV3IHVzaW5nIE9OTFkgdGhlIHBhdGllbnQgcGFyYW1ldGVyLCB0aGVuIHdhaXQuIgogICAgV2hlbiBNZWRpY2F0aW9uT3ZlcnZpZXdSZXNwb25kZXIgd2FpdHMgZm9yIE1lZGljYXRpb25PdmVydmlld0NvbnN1bWVyIHdpdGhpbiAzMDAgc2Vjb25kcwoKICAgICMgUEhBUk0tMTEgaXMgYSBGSElSIHNlYXJjaCDigJQgR0VULCBuZXZlciBQT1NULgogICAgVGhlbiAibGFzdFJlY2VpdmVke21ldGhvZH0iIHNob3VsZCBiZSAiR0VUIgogICAgIyBRdWVyeSBNZWRpY2F0aW9uIFJlc291cmNlcyB0YXJnZXRzIE1lZGljYXRpb25TdGF0ZW1lbnQsIHByb2ZpbGVkIGFzCiAgICAjIE1lZGljYXRpb25UcmVhdG1lbnRMaW5lLgogICAgQW5kICJsYXN0UmVjZWl2ZWR7cGF0aH0iIHNob3VsZCBjb250YWluICIvTWVkaWNhdGlvblN0YXRlbWVudCIKICAgIEFuZCAibGFzdFJlY2VpdmVke3BhdGh9IiBzaG91bGQgY29udGFpbiAicGF0aWVudD0iCiAgICAjIFRoZSBDb25zdW1lciBtdXN0IGFzayBmb3IgRkhJUiBKU09OLiBTb21lIGNsaWVudHMgdXNlIHRoZSBfZm9ybWF0CiAgICAjIHF1ZXJ5IHBhcmFtZXRlciBpbnN0ZWFkIG9mIHRoZSBBY2NlcHQgaGVhZGVyIOKAlCBib3RoIGFyZSBhbGxvd2VkIGJ5CiAgICAjIHRoZSBDb25zdW1lcidzIE9wZW5BUEkuIFN3YXAgdGhpcyBsaW5lIGZvciBhIHtwYXRofSBjb250YWlucwogICAgIyAiX2Zvcm1hdD0iIGNoZWNrIGlmIHRoYXQgaXMgd2hhdCB5b3VyIFNVVCBkb2VzLgogICAgQW5kICJsYXN0UmVjZWl2ZWR7aGVhZGVyc317QWNjZXB0fSIgc2hvdWxkIGNvbnRhaW4gImZoaXIranNvbiIKCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgIyBST1VORCAyIOKAlCBwYXRpZW50ICsgc3RhdHVzLiBQcm92ZXMgdGhlIENvbnN1bWVyIGNhbiBuYXJyb3cgYSBxdWVyeQogICAgIyBieSB0cmVhdG1lbnQgbGluZSBzdGF0dXMgcmF0aGVyIHRoYW4gZmlsdGVyaW5nIGNsaWVudC1zaWRlIGFmdGVyCiAgICAjIHB1bGxpbmcgZXZlcnl0aGluZy4KICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICBHaXZlbiBNZWRpY2F0aW9uT3ZlcnZpZXdDb25zdW1lciBpcyBpbmZvcm1lZCAiUk9VTkQgMiBvZiAzIOKAlCBxdWVyeSB0aGUgc2FtZSBwYXRpZW50IGFnYWluLCB0aGlzIHRpbWUgQUxTTyBmaWx0ZXJpbmcgYnkgc3RhdHVzIChmb3IgZXhhbXBsZSBzdGF0dXM9YWN0aXZlKSwgdGhlbiB3YWl0LiIKICAgIFdoZW4gTWVkaWNhdGlvbk92ZXJ2aWV3UmVzcG9uZGVyIHdhaXRzIGZvciBNZWRpY2F0aW9uT3ZlcnZpZXdDb25zdW1lciB3aXRoaW4gMzAwIHNlY29uZHMKCiAgICBUaGVuICJsYXN0UmVjZWl2ZWR7bWV0aG9kfSIgc2hvdWxkIGJlICJHRVQiCiAgICBBbmQgImxhc3RSZWNlaXZlZHtwYXRofSIgc2hvdWxkIGNvbnRhaW4gIi9NZWRpY2F0aW9uU3RhdGVtZW50IgogICAgIyBwYXRpZW50IHN0YXlzIG1hbmRhdG9yeSDigJQgYSBzdGF0dXMgZmlsdGVyIG5ldmVyIHJlcGxhY2VzIGl0LgogICAgQW5kICJsYXN0UmVjZWl2ZWR7cGF0aH0iIHNob3VsZCBjb250YWluICJwYXRpZW50PSIKICAgIEFuZCAibGFzdFJlY2VpdmVke3BhdGh9IiBzaG91bGQgY29udGFpbiAic3RhdHVzPSIKCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgIyBST1VORCAzIOKAlCBwYXRpZW50ICsgX2xhc3RVcGRhdGVkLCB0aGUgaW5jcmVtZW50YWwtc3luYyBwYXJhbWV0ZXIuCiAgICAjIFN3YXAgYF9sYXN0VXBkYXRlZD1gIGJlbG93IGZvciBgY2F0ZWdvcnk9YCBvciBgZWZmZWN0aXZlPWAgdG8KICAgICMgZXhlcmNpc2UgYSBkaWZmZXJlbnQgb3B0aW9uYWwgcGFyYW1ldGVyIGluc3RlYWQ7IHRoZSBzaGFwZSBvZiB0aGUKICAgICMgcm91bmQgaXMgaWRlbnRpY2FsLgogICAgIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIEdpdmVuIE1lZGljYXRpb25PdmVydmlld0NvbnN1bWVyIGlzIGluZm9ybWVkICJST1VORCAzIG9mIDMg4oCUIHF1ZXJ5IHRoZSBzYW1lIHBhdGllbnQgYWdhaW4sIHRoaXMgdGltZSBBTFNPIGZpbHRlcmluZyBieSBfbGFzdFVwZGF0ZWQgKGFuIGluY3JlbWVudGFsIHN5bmMgc2luY2UgYSBnaXZlbiBpbnN0YW50KSwgdGhlbiB3YWl0LiIKICAgIFdoZW4gTWVkaWNhdGlvbk92ZXJ2aWV3UmVzcG9uZGVyIHdhaXRzIGZvciBNZWRpY2F0aW9uT3ZlcnZpZXdDb25zdW1lciB3aXRoaW4gMzAwIHNlY29uZHMKCiAgICBUaGVuICJsYXN0UmVjZWl2ZWR7bWV0aG9kfSIgc2hvdWxkIGJlICJHRVQiCiAgICBBbmQgImxhc3RSZWNlaXZlZHtwYXRofSIgc2hvdWxkIGNvbnRhaW4gIi9NZWRpY2F0aW9uU3RhdGVtZW50IgogICAgQW5kICJsYXN0UmVjZWl2ZWR7cGF0aH0iIHNob3VsZCBjb250YWluICJwYXRpZW50PSIKICAgIEFuZCAibGFzdFJlY2VpdmVke3BhdGh9IiBzaG91bGQgY29udGFpbiAiX2xhc3RVcGRhdGVkPSIKCiAgICBBbmQgTWVkaWNhdGlvbk92ZXJ2aWV3Q29uc3VtZXIgaXMgaW5mb3JtZWQgIlBIQVJNLTExIHF1ZXJ5IGNvbmZvcm1hbmNlIHBhc3NlZDogdGhlIENvbnN1bWVyIGJ1aWxkcyB3ZWxsLWZvcm1lZCBxdWVyaWVzIGJ5IHBhdGllbnQsIGJ5IHN0YXR1cywgYW5kIGJ5IF9sYXN0VXBkYXRlZC4iCgogICMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgIyAyLiBTVUJNSVQg4oCUIHRoZSBvdmVydmlldyB0aGUgQ29uc3VtZXIgc2VuZHMgbXVzdCBjb25mb3JtCiAgIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAjIE5PVEUgT04gU0NPUEU6IE1FT1cgaXRzZWxmIGRlZmluZXMgbm8gc3VibWl0IHRyYW5zYWN0aW9uIOKAlCBib3RoIHRoZQogICMgQ29uc3VtZXIgYW5kIHRoZSBSZXNwb25kZXIgQ2FwYWJpbGl0eVN0YXRlbWVudHMgYXJlIHJlYWQvc2VhcmNoIG9ubHkuCiAgIyBTbyB0aGUgRU5EUE9JTlQgdGhlIFNVVCBwb3N0cyB0byBpcyBkZXBsb3ltZW50LXNwZWNpZmljIGFuZCB0aGlzIHRlc3QKICAjIGFzc2VydHMgb25seSB0aGF0IGl0IGlzIGEgUE9TVCBjYXJyeWluZyBGSElSIEpTT04uIFdoYXQgdGhlIHByb2ZpbGUKICAjIGRvZXMgZ292ZXJuLCBhbmQgd2hhdCB0aGlzIHNjZW5hcmlvIHJlYWxseSB0ZXN0cywgaXMgdGhlIFBBWUxPQUQuCiAgU2NlbmFyaW86IHRjLW1lb3ctY2xpZW50LTAwMiBTdWJtaXR0ZWQgb3ZlcnZpZXcgY29uZm9ybXMgdG8gTWVkaWNhdGlvbk92ZXJ2aWV3CgogICAgIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICMgMSkgTG9hZCBJSEUgTUVPVyBmcm9tIHRoZSBsb2NhbCBwYWNrYWdlIHNlcnZlci4KICAgICMgICAgMS4wLjAtcHJldmlldzIg4oCUIHRoZSBGSVhFRCBCdW5kbGUuZW50cnkgc2xpY2luZy4gVGhlIG9mZmljaWFsCiAgICAjICAgIDEuMC4wLXByZXZpZXcgbWlzLXNsaWNlcyBldmVyeSBlbnRyeSBpbnRvIHRoZSBQYXRpZW50IHNsaWNlLAogICAgIyAgICB3aGljaCBpcyB3aHkgUkFDU0VMLXRyYWNrMyBjYXJyaWVzIGEgMTAtY2xhdXNlIGV4YWN0LWVycm9yIG1hc2suCiAgICAjICAgIHByZXZpZXcyIGlzIHdoeSB0aGlzIHNjZW5hcmlvIG5lZWRzIG5vbmUgb2YgdGhhdC4KICAgICMgICAgVVJMIGZvcm0gcGVyIHRoZSBwYWNrYWdlLXNlcnZlciByZXNvbHV0aW9uIGNvbnRyYWN0OiB0aGUgdHJhaWxpbmcKICAgICMgICAgL3BhY2thZ2UudGd6IGlzIHJlcXVpcmVkIOKAlCBmb3JtYXQtc25pZmZpbmcgbG9hZGVycyBuZWVkIHRoZSAudGd6CiAgICAjICAgIGV4dGVuc2lvbi4KICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICBXaGVuIE1lZGljYXRpb25PdmVydmlld0NvbnN1bWVyIGxvYWRzIElHICJodHRwOi8vcGFja2FnZS1zZXJ2ZXI6ODAwMC9paGUucGhhcm0ubWVvdy8xLjAuMC1wcmV2aWV3Mi9wYWNrYWdlLnRneiIgb24gRkhJUlZhbGlkYXRvcgogICAgVGhlbiAicmVzcG9uc2Ugc3RhdHVzIiBzaG91bGQgYmUgIjIwMCIKCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgIyAyKSBXYWl0IGZvciB0aGUgU1VUIHRvIHN1Ym1pdCBpdHMgTWVkaWNhdGlvbiBPdmVydmlldy4KICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICBHaXZlbiBNZWRpY2F0aW9uT3ZlcnZpZXdDb25zdW1lciBpcyBpbmZvcm1lZCAiU3VibWl0IHRoZSBNZWRpY2F0aW9uIE92ZXJ2aWV3IGZvciB0aGUgdGVzdCBwYXRpZW50IHRvIHRoZSBlbmRwb2ludCBjb25maWd1cmVkIGZvciB0aGlzIHRlc3Qgc2Vzc2lvbiwgdGhlbiB3YWl0LiIKICAgIFdoZW4gTWVkaWNhdGlvbk92ZXJ2aWV3UmVzcG9uZGVyIHdhaXRzIGZvciBNZWRpY2F0aW9uT3ZlcnZpZXdDb25zdW1lciB3aXRoaW4gMzAwIHNlY29uZHMKCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgIyAzKSBUcmFuc3BvcnQtbGV2ZWwgc2hhcGUuIEEgc3VibWl0IGlzIGEgUE9TVCBjYXJyeWluZyBGSElSIEpTT04uCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgVGhlbiAibGFzdFJlY2VpdmVke21ldGhvZH0iIHNob3VsZCBiZSAiUE9TVCIKICAgIEFuZCAibGFzdFJlY2VpdmVke2hlYWRlcnN9e0NvbnRlbnQtVHlwZX0iIHNob3VsZCBjb250YWluICJmaGlyK2pzb24iCiAgICBBbmQgImxhc3RSZWNlaXZlZHtib2R5fSIgc2hvdWxkIG5vdCBiZSBlbXB0eQoKICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAjIDQpIENoZWFwIHN0cnVjdHVyYWwgZ2F0ZSBiZWZvcmUgdGhlIGV4cGVuc2l2ZSBwcm9maWxlIHZhbGlkYXRpb24sCiAgICAjICAgIHNvIGEgd3JvbmcgcGF5bG9hZCBmYWlscyB3aXRoIGEgY2xlYXIgbWVzc2FnZSBpbnN0ZWFkIG9mIGEgd2FsbAogICAgIyAgICBvZiB2YWxpZGF0b3Igb3V0cHV0LiBBIG5vbi1CdW5kbGUgcGF5bG9hZCBmYWlscyByaWdodCBoZXJlLgogICAgIwogICAgIyAgICBETyBOT1QgcmVhY2ggZm9yIGBleHRyYWN0ICIvcmVzb3VyY2VUeXBlIiBmcm9tICJsYXN0UmVjZWl2ZWR7Ym9keX0iYAogICAgIyAgICBpbnN0ZWFkOiB0aGF0IHN0ZXAncyBgZnJvbWAgY2FwdHVyZSBvbmx5IGFjY2VwdHMgYSBwbGFpbgogICAgIyAgICBpZGVudGlmaWVyIChbQS1aYS16X11bQS1aYS16MC05X10qKSwgc28gaXQgd2lsbCBub3QgdGFrZSBhIG1hcAogICAgIyAgICBwYXRoIGxpa2UgbGFzdFJlY2VpdmVke2JvZHl9IOKAlCBhbmQgYW4gdW5tYXRjaGVkIHN0ZXAgaXMgU0lMRU5UTFkKICAgICMgICAgRFJPUFBFRCBieSB0aGUgY29tcGlsZXIgcmF0aGVyIHRoYW4gZmFpbGluZyB0aGUgYnVpbGQsIHdoaWNoCiAgICAjICAgIGxlYXZlcyBhbiBhc3NlcnRpb24gcmVhZGluZyBhbiB1bmFzc2lnbmVkIHZhcmlhYmxlLiBGSElSUGF0aCdzCiAgICAjICAgIGBvbiAiPHZhcj4iYCBjYXB0dXJlIGlzIHVucmVzdHJpY3RlZCwgc28gaXQgZG9lcyB0aGUgZ2F0aW5nLgogICAgIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIEFuZCBldmFsdWF0ZSBGSElSUGF0aCAiQnVuZGxlLnR5cGUiIG9uICJsYXN0UmVjZWl2ZWR7Ym9keX0iIGFuZCBleHBlY3QgImRvY3VtZW50IgoKICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAjIDUpIFRoZSBjb25mb3JtYW5jZSBhc3NlcnRpb24gcHJvcGVyLiBGYWlscyBpZiB0aGUgdmFsaWRhdG9yIHJlcG9ydHMKICAgICMgICAgYW55IGVycm9yLWxldmVsIGlzc3VlIGFnYWluc3QgdGhlIHByb2ZpbGUuCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgQW5kICJsYXN0UmVjZWl2ZWR7Ym9keX0iIGNvbmZvcm1zIHRvICJodHRwczovL3Byb2ZpbGVzLmloZS5uZXQvUEhBUk0vTUVPVy9TdHJ1Y3R1cmVEZWZpbml0aW9uL01lZGljYXRpb25PdmVydmlldyIKCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgIyA2KSBDb250ZW50IGNoZWNrcyB0aGUgcHJvZmlsZSBhbG9uZSB3aWxsIG5vdCBjYXRjaCDigJQgYSBCdW5kbGUgY2FuCiAgICAjICAgIGJlIHN0cnVjdHVyYWxseSB2YWxpZCBhbmQgc3RpbGwgYmUgYW4gZW1wdHkgb3ZlcnZpZXcuCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgQW5kIGV2YWx1YXRlIEZISVJQYXRoICJCdW5kbGUuZW50cnkucmVzb3VyY2Uub2ZUeXBlKENvbXBvc2l0aW9uKS5jb3VudCgpIiBvbiAibGFzdFJlY2VpdmVke2JvZHl9IiBhbmQgZXhwZWN0ICIxIgogICAgQW5kIGV2YWx1YXRlIEZISVJQYXRoICJCdW5kbGUuZW50cnkucmVzb3VyY2Uub2ZUeXBlKFBhdGllbnQpLmV4aXN0cygpIiBvbiAibGFzdFJlY2VpdmVke2JvZHl9IiBhbmQgZXhwZWN0ICJ0cnVlIgogICAgQW5kIGV2YWx1YXRlIEZISVJQYXRoICJCdW5kbGUuZW50cnkucmVzb3VyY2Uub2ZUeXBlKE1lZGljYXRpb25TdGF0ZW1lbnQpLmV4aXN0cygpIiBvbiAibGFzdFJlY2VpdmVke2JvZHl9IiBhbmQgZXhwZWN0ICJ0cnVlIgoKICAgIEFuZCBNZWRpY2F0aW9uT3ZlcnZpZXdDb25zdW1lciBpcyBpbmZvcm1lZCAiU3VibWl0dGVkIE1lZGljYXRpb24gT3ZlcnZpZXcgY29uZm9ybXMgdG8gSUhFIE1FT1cgTWVkaWNhdGlvbk92ZXJ2aWV3IGFuZCBjYXJyaWVzIGF0IGxlYXN0IG9uZSB0cmVhdG1lbnQgbGluZS4iCg==&quot;/&gt;
+&lt;/<a href="http://hl7.org/fhir/6.0.0-ballot5/binary.html#XBinary">Binary</a>&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/costateixeira/pharm-MEOW-test">Jose Costa Teixeira</a>.  
+          Package ihe.pharm.meow.test#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/6.0.0-ballot5/">FHIR 6.0.0-ballot5</a>.
+          Generated <span title="Mon, Aug 31, 2026 20:09+0000">2026-08-31</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

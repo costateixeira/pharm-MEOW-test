@@ -1,0 +1,449 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MEOW Client Gherkin Script - IHE PHARM MEOW: TestPlan and Gherkin Demonstration v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5.3"}
+    h3,h4,h5,h6{--heading-prefix:"5.3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">IHE PHARM MEOW: TestPlan and Gherkin Demonstration</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - 
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/6.0.0-ballot5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="testing.html">Testing</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Changes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MEOW Client Gherkin Script</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-instance-base -->
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">IHE PHARM MEOW: TestPlan and Gherkin Demonstration, published by Jose Costa Teixeira. This guide is not an authorized publication; it is the continuous build for version 1.0.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/costateixeira/pharm-MEOW-test/tree/master'>https://github.com/costateixeira/pharm-MEOW-test/tree/master</a> and changes regularly. See the <a href='http://example.com/fhir/ihe.pharm.meow.test/history.html'>Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/costateixeira/pharm-MEOW-test/commit/825bd1d5f87c9a248b2e80604bcd930fe9ef3cff"><code>825bd1d5</code></a>.</span></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Binary-meow-client-gherkin-script.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Binary-meow-client-gherkin-script.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Binary-meow-client-gherkin-script.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+
+  <h2 id="root">Binary: MEOW Client Gherkin Script</h2>
+
+
+
+  
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div>
+  <pre class="gherkin language-gherkin">
+    <code>
+Feature: IHE MEOW Medication Overview Consumer — client-side conformance
+  Tests a MEOW *client* (the Medication Overview Consumer actor), not a QR
+  pipeline. The SUT initiates every exchange; ITB plays the Responder and
+  judges what arrives.
+
+    tc-meow-client-001  QUERY  — the Consumer must be able to query by
+                                 patient (required) and by the optional
+                                 search parameters it declares support for.
+    tc-meow-client-002  SUBMIT — whatever Medication Overview the Consumer
+                                 submits must conform to the MEOW
+                                 MedicationOverview profile.
+
+  Actors are named after the real CapabilityStatements in ihe.pharm.meow:
+    https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewConsumer
+    https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewResponder
+
+  Consumer search parameters per that CapabilityStatement (mode: client),
+  on MedicationStatement / PHARM-11, profiled as MedicationTreatmentLine:
+    patient        reference  REQUIRED — the patient whose overview is wanted
+    status         token      filter by treatment line status
+    effective      date       filter by effective period of the treatment line
+    category       token      filter by medication list category / list type
+    _lastUpdated   date       incremental sync
+
+  # ==================================================================
+  # READ THIS BEFORE THE FIRST RUN — one thing to calibrate
+  # ==================================================================
+  # Both scenarios read the request the SUT sent, via $lastReceived{...}.
+  # No generated suite anywhere in this ecosystem has used a &lt;receive&gt;
+  # step before, so the FIELD NAMES below are the expected HttpMessagingV2
+  # receive outputs — not names observed on a running ITB.
+  #
+  # If an assertion fails with an EMPTY actual value, the field name is
+  # wrong, not the SUT. Every request-shape assertion in this file reads
+  # `lastReceived{path}`, `lastReceived{method}`, `lastReceived{body}` or
+  # `lastReceived{headers}{...}` — deliberately one small set, so a
+  # rename is a find-and-replace. Likely alternatives to try:
+  #   {path}    -&gt; {uri} | {requestURI} | {target}
+  #   {headers} -&gt; {header}
+  # This works because the generic assertion interpolates whatever sits
+  # inside the quotes as a TDL variable path: "lastReceived{method}"
+  # compiles to $lastReceived{method}. No en.yml change is needed to
+  # retarget it.
+  #
+  # Also note: ITB does NOT reply. The compiler emits no &lt;btxn&gt;/&lt;etxn&gt;,
+  # so nothing can be sent back on the same exchange — the Consumer sees
+  # a timeout after ITB has inspected its request. The request assertions
+  # are unaffected; the Consumer just gets no data.
+
+  Background:
+    Given MedicationOverviewConsumer is the system under test as defined by "https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewConsumer"
+    # ITB simulates the Responder. Point the Consumer's FHIR base URL at
+    # the endpoint ITB advertises for this actor.
+    And MedicationOverviewResponder is infrastructure as defined by "https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewResponder"
+    # GITB-compatible FHIR validator (validator_cli.jar) — exposes
+    # /itb/{igManager,transform,loadResource,fhir,fhirPath}/process.
+    # Same actor the RACSEL track features use.
+    And FHIRValidator is infrastructure at "http://fhir-validator:8080"
+
+  # ==================================================================
+  # 1. QUERY — by patient, then by the optional parameters
+  # ==================================================================
+  # Three rounds. Each is a separate exchange the operator triggers on
+  # the SUT, so the test proves the Consumer can actually *build* each
+  # query — not merely that it can build one and repeat it.
+  Scenario: tc-meow-client-001 PHARM-11 query by patient and by optional parameters
+
+    # ------------------------------------------------------------------
+    # ROUND 1 — the mandatory baseline: query by patient alone.
+    # A PHARM-11 query without `patient` is non-conformant no matter what
+    # else it carries, so this round is the one that must never be
+    # relaxed.
+    # ------------------------------------------------------------------
+    Given MedicationOverviewConsumer is informed "ROUND 1 of 3 — query the Responder for the test patient's medication overview using ONLY the patient parameter, then wait."
+    When MedicationOverviewResponder waits for MedicationOverviewConsumer within 300 seconds
+
+    # PHARM-11 is a FHIR search — GET, never POST.
+    Then "lastReceived{method}" should be "GET"
+    # Query Medication Resources targets MedicationStatement, profiled as
+    # MedicationTreatmentLine.
+    And "lastReceived{path}" should contain "/MedicationStatement"
+    And "lastReceived{path}" should contain "patient="
+    # The Consumer must ask for FHIR JSON. Some clients use the _format
+    # query parameter instead of the Accept header — both are allowed by
+    # the Consumer's OpenAPI. Swap this line for a {path} contains
+    # "_format=" check if that is what your SUT does.
+    And "lastReceived{headers}{Accept}" should contain "fhir+json"
+
+    # ------------------------------------------------------------------
+    # ROUND 2 — patient + status. Proves the Consumer can narrow a query
+    # by treatment line status rather than filtering client-side after
+    # pulling everything.
+    # ------------------------------------------------------------------
+    Given MedicationOverviewConsumer is informed "ROUND 2 of 3 — query the same patient again, this time ALSO filtering by status (for example status=active), then wait."
+    When MedicationOverviewResponder waits for MedicationOverviewConsumer within 300 seconds
+
+    Then "lastReceived{method}" should be "GET"
+    And "lastReceived{path}" should contain "/MedicationStatement"
+    # patient stays mandatory — a status filter never replaces it.
+    And "lastReceived{path}" should contain "patient="
+    And "lastReceived{path}" should contain "status="
+
+    # ------------------------------------------------------------------
+    # ROUND 3 — patient + _lastUpdated, the incremental-sync parameter.
+    # Swap `_lastUpdated=` below for `category=` or `effective=` to
+    # exercise a different optional parameter instead; the shape of the
+    # round is identical.
+    # ------------------------------------------------------------------
+    Given MedicationOverviewConsumer is informed "ROUND 3 of 3 — query the same patient again, this time ALSO filtering by _lastUpdated (an incremental sync since a given instant), then wait."
+    When MedicationOverviewResponder waits for MedicationOverviewConsumer within 300 seconds
+
+    Then "lastReceived{method}" should be "GET"
+    And "lastReceived{path}" should contain "/MedicationStatement"
+    And "lastReceived{path}" should contain "patient="
+    And "lastReceived{path}" should contain "_lastUpdated="
+
+    And MedicationOverviewConsumer is informed "PHARM-11 query conformance passed: the Consumer builds well-formed queries by patient, by status, and by _lastUpdated."
+
+  # ==================================================================
+  # 2. SUBMIT — the overview the Consumer sends must conform
+  # ==================================================================
+  # NOTE ON SCOPE: MEOW itself defines no submit transaction — both the
+  # Consumer and the Responder CapabilityStatements are read/search only.
+  # So the ENDPOINT the SUT posts to is deployment-specific and this test
+  # asserts only that it is a POST carrying FHIR JSON. What the profile
+  # does govern, and what this scenario really tests, is the PAYLOAD.
+  Scenario: tc-meow-client-002 Submitted overview conforms to MedicationOverview
+
+    # ------------------------------------------------------------------
+    # 1) Load IHE MEOW from the local package server.
+    #    1.0.0-preview2 — the FIXED Bundle.entry slicing. The official
+    #    1.0.0-preview mis-slices every entry into the Patient slice,
+    #    which is why RACSEL-track3 carries a 10-clause exact-error mask.
+    #    preview2 is why this scenario needs none of that.
+    #    URL form per the package-server resolution contract: the trailing
+    #    /package.tgz is required — format-sniffing loaders need the .tgz
+    #    extension.
+    # ------------------------------------------------------------------
+    When MedicationOverviewConsumer loads IG "http://package-server:8000/ihe.pharm.meow/1.0.0-preview2/package.tgz" on FHIRValidator
+    Then "response status" should be "200"
+
+    # ------------------------------------------------------------------
+    # 2) Wait for the SUT to submit its Medication Overview.
+    # ------------------------------------------------------------------
+    Given MedicationOverviewConsumer is informed "Submit the Medication Overview for the test patient to the endpoint configured for this test session, then wait."
+    When MedicationOverviewResponder waits for MedicationOverviewConsumer within 300 seconds
+
+    # ------------------------------------------------------------------
+    # 3) Transport-level shape. A submit is a POST carrying FHIR JSON.
+    # ------------------------------------------------------------------
+    Then "lastReceived{method}" should be "POST"
+    And "lastReceived{headers}{Content-Type}" should contain "fhir+json"
+    And "lastReceived{body}" should not be empty
+
+    # ------------------------------------------------------------------
+    # 4) Cheap structural gate before the expensive profile validation,
+    #    so a wrong payload fails with a clear message instead of a wall
+    #    of validator output. A non-Bundle payload fails right here.
+    #
+    #    DO NOT reach for `extract "/resourceType" from "lastReceived{body}"`
+    #    instead: that step's `from` capture only accepts a plain
+    #    identifier ([A-Za-z_][A-Za-z0-9_]*), so it will not take a map
+    #    path like lastReceived{body} — and an unmatched step is SILENTLY
+    #    DROPPED by the compiler rather than failing the build, which
+    #    leaves an assertion reading an unassigned variable. FHIRPath's
+    #    `on "&lt;var&gt;"` capture is unrestricted, so it does the gating.
+    # ------------------------------------------------------------------
+    And evaluate FHIRPath "Bundle.type" on "lastReceived{body}" and expect "document"
+
+    # ------------------------------------------------------------------
+    # 5) The conformance assertion proper. Fails if the validator reports
+    #    any error-level issue against the profile.
+    # ------------------------------------------------------------------
+    And "lastReceived{body}" conforms to "https://profiles.ihe.net/PHARM/MEOW/StructureDefinition/MedicationOverview"
+
+    # ------------------------------------------------------------------
+    # 6) Content checks the profile alone will not catch — a Bundle can
+    #    be structurally valid and still be an empty overview.
+    # ------------------------------------------------------------------
+    And evaluate FHIRPath "Bundle.entry.resource.ofType(Composition).count()" on "lastReceived{body}" and expect "1"
+    And evaluate FHIRPath "Bundle.entry.resource.ofType(Patient).exists()" on "lastReceived{body}" and expect "true"
+    And evaluate FHIRPath "Bundle.entry.resource.ofType(MedicationStatement).exists()" on "lastReceived{body}" and expect "true"
+
+    And MedicationOverviewConsumer is informed "Submitted Medication Overview conforms to IHE MEOW MedicationOverview and carries at least one treatment line."
+</code>
+  </pre>
+</div>
+
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/costateixeira/pharm-MEOW-test">Jose Costa Teixeira</a>.  
+          Package ihe.pharm.meow.test#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/6.0.0-ballot5/">FHIR 6.0.0-ballot5</a>.
+          Generated <span title="Mon, Aug 31, 2026 20:09+0000">2026-08-31</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

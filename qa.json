@@ -1,0 +1,20 @@
+{
+  "url" : "http://example.com/fhir/ihe.pharm.meow.test/ImplementationGuide/ihe.pharm.meow.test",
+  "name" : "IHEPharmMEOWTesting",
+  "title" : "IHE PHARM MEOW: TestPlan and Gherkin Demonstration",
+  "description" : "A demonstration IG showing how the TestPlan resource and Gherkin feature files can declare the conformance tests for the actors of IHE PHARM Medication Overview (MEOW). Not an approved IHE test specification.",
+  "ig-date" : "2026-08-27",
+  "status" : "active",
+  "package-id" : "ihe.pharm.meow.test",
+  "ig-ver" : "1.0.0",
+  "date" : "Mon, 31 Aug, 2026 20:09:09 +0000",
+  "dateISO8601" : "2026-08-31T20:09:09+00:00",
+  "errs" : 1,
+  "warnings" : 9,
+  "hints" : 6,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "6.0.0-ballot5",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 775605168
+}

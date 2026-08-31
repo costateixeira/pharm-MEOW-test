@@ -1,0 +1,265 @@
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MEOW Server Gherkin Script - XML Representation - IHE PHARM MEOW: TestPlan and Gherkin Demonstration v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5.4"}
+    h3,h4,h5,h6{--heading-prefix:"5.4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">IHE PHARM MEOW: TestPlan and Gherkin Demonstration</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - 
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/6.0.0-ballot5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="testing.html">Testing</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Changes</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MEOW Server Gherkin Script</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-instance-format -->
+<div style="counter-reset: section 7" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">IHE PHARM MEOW: TestPlan and Gherkin Demonstration, published by Jose Costa Teixeira. This guide is not an authorized publication; it is the continuous build for version 1.0.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/costateixeira/pharm-MEOW-test/tree/master'>https://github.com/costateixeira/pharm-MEOW-test/tree/master</a> and changes regularly. See the <a href='http://example.com/fhir/ihe.pharm.meow.test/history.html'>Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/costateixeira/pharm-MEOW-test/commit/825bd1d5f87c9a248b2e80604bcd930fe9ef3cff"><code>825bd1d5</code></a>.</span></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Binary-meow-server-gherkin-script.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li class="active">
+      <a href="#">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Binary-meow-server-gherkin-script.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Binary-meow-server-gherkin-script.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+
+<h2 id="root">: MEOW Server Gherkin Script</h2>
+
+
+<p><a href="Binary-meow-server-gherkin-script.xml" no-download="true">Raw xml</a> | <a href="Binary-meow-server-gherkin-script.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="xml" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">
+&lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/binary.html#XBinary">Binary</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/resource.html#XBinary.id">id</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#string">value</a>=&quot;meow-server-gherkin-script&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/resource.html#XBinary.language">language</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;en&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/binary.html#XBinary.contentType">contentType</a> <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#code">value</a>=&quot;text/x-gherkin&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/6.0.0-ballot5/binary.html#XBinary.data">data</a>
+        <a href="http://hl7.org/fhir/6.0.0-ballot5/datatypes.html#base64Binary">value</a>=&quot;IyBUaGUgb3RoZXIgc2lkZSBvZiB0aGUgTUVPVyB0cmFuc2FjdGlvbiBmcm9tIG1lb3ctY2xpZW50LmZlYXR1cmU6IGhlcmUgdGhlCiMgU1VUIGlzIHRoZSBNZWRpY2F0aW9uIE92ZXJ2aWV3IFJlc3BvbmRlciAoYSBzZXJ2ZXIpLCBhbmQgSVRCIGRyaXZlcyB0aGUKIyBleGNoYW5nZSBhcyB0aGUgQ29uc3VtZXIuIFRoYXQgcmV2ZXJzZXMgdGhlIGhhcmQgcGFydCDigJQgSVRCIHNlbmRzIGFuZCB0aGUKIyBTVVQgYW5zd2Vycywgc28gbm90aGluZyBkZXBlbmRzIG9uIDxyZWNlaXZlPiBvciBvbiBJVEIgcmVwbHlpbmcsIGFuZCBldmVyeQojIGFzc2VydGlvbiBpcyBvbiBhIHJlc3BvbnNlIElUQiBmZXRjaGVkIGl0c2VsZi4KQGxhbmc6aXRiLWNvcmUtZW5AXjEuMiBAZGlhbGVjdDpmaGlyLXZhbGlkYXRvckBeMS4wCkZlYXR1cmU6IElIRSBNRU9XIE1lZGljYXRpb24gT3ZlcnZpZXcgUmVzcG9uZGVyIOKAlCBzZXJ2ZXItc2lkZSBjb25mb3JtYW5jZQogIEV4ZXJjaXNlcyB0aGUgUmVzcG9uZGVyIGFjdG9yIG9mIHRoZSBJSEUgUEhBUk0gTUVPVyBwcm9maWxlOgoKICAgIHRjLW1lb3ctc2VydmVyLTAwMSAgUEhBUk0tMTEgcXVlcnkgYnkgcGF0aWVudCAodGhlIHJlcXVpcmVkIGJhc2VsaW5lKQogICAgdGMtbWVvdy1zZXJ2ZXItMDAyICBQSEFSTS0xMSBvcHRpb25hbCBzZWFyY2ggcGFyYW1ldGVycyBhcmUgaG9ub3VyZWQKICAgIHRjLW1lb3ctc2VydmVyLTAwMyAgUEhBUk0tMTEgcmVqZWN0cyBhIHF1ZXJ5IG1pc3NpbmcgdGhlIHJlcXVpcmVkIHBhdGllbnQKICAgIHRjLW1lb3ctc2VydmVyLTAwNCAgUEhBUk0tMTIgRG9jdW1lbnQgT3B0aW9uIOKAlCByZXRyaWV2ZSBhIE1lZGljYXRpb25PdmVydmlldwoKICBTY2VuYXJpbyBpZHMgYXJlIGtlcHQgb25lLXRyYW5zYWN0aW9uLXBlci1zY2VuYXJpbyBvbiBwdXJwb3NlLCBzbyBhCiAgVGVzdFBsYW4gY2FuIGxhdGVyIHNjb3BlIGVhY2ggdG8gdGhlIFBIQVJNLTExIC8gUEhBUk0tMTIgdHJhbnNhY3Rpb24gaXQKICBjb3ZlcnMgd2l0aG91dCBoYXZpbmcgdG8gc3BsaXQgYW55dGhpbmcgdXAuCgogIFJlc3BvbmRlciBjYXBhYmlsaXRpZXMgcGVyIHRoZSBDYXBhYmlsaXR5U3RhdGVtZW50IGluIGloZS5waGFybS5tZW93CiAgKGh0dHBzOi8vcHJvZmlsZXMuaWhlLm5ldC9QSEFSTS9NRU9XL0NhcGFiaWxpdHlTdGF0ZW1lbnQvTWVkaWNhdGlvbk92ZXJ2aWV3UmVzcG9uZGVyLAogIG1vZGU6IHNlcnZlcik6CiAgICBNZWRpY2F0aW9uU3RhdGVtZW50ICBzZWFyY2gtdHlwZSwgcmVhZCAg4oCUIFBIQVJNLTExLCBwcm9maWxlZCBhcwogICAgICAgICAgICAgICAgICAgICAgICAgTWVkaWNhdGlvblRyZWF0bWVudExpbmUuIGBwYXRpZW50YCBSRVFVSVJFRDsKICAgICAgICAgICAgICAgICAgICAgICAgIGBzdGF0dXNgLCBgZWZmZWN0aXZlYCwgYGNhdGVnb3J5YCwgYF9sYXN0VXBkYXRlZGAKICAgICAgICAgICAgICAgICAgICAgICAgIG9wdGlvbmFsLgogICAgQnVuZGxlICAgICAgICAgICAgICAgc2VhcmNoLXR5cGUsIHJlYWQgIOKAlCBQSEFSTS0xMiBEb2N1bWVudCBPcHRpb24sCiAgICAgICAgICAgICAgICAgICAgICAgICBwcm9maWxlZCBhcyBNZWRpY2F0aW9uT3ZlcnZpZXcuIGBwYXRpZW50YCByZXF1aXJlZAogICAgICAgICAgICAgICAgICAgICAgICAgZm9yIHBhdGllbnQtc2NvcGVkIGRvY3VtZW50IHNlYXJjaDsgYHR5cGVgLCBgZGF0ZWAKICAgICAgICAgICAgICAgICAgICAgICAgIG9wdGlvbmFsLgogICAgQ2FyZVBsYW4gLyBNZWRpY2F0aW9uIC8gTWVkaWNhdGlvblJlcXVlc3QgLyBNZWRpY2F0aW9uRGlzcGVuc2UgLwogICAgTWVkaWNhdGlvbkFkbWluaXN0cmF0aW9uIOKAlCByZWFkLgoKICAjID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICMgUE9JTlRFRCBBVCBBIFBVQkxJQyBGSElSIFNFUlZFUiDigJQgTk9UIEEgQ09ORk9STUFOQ0UgUlVOCiAgIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAjIFRoZSBTVVQgaXMgaHR0cHM6Ly9oYXBpLmZoaXIub3JnL2Jhc2VSNCB3aXRoIHBhdGllbnQgMTM3MjAyNjMxLCBwaWNrZWQKICAjIGJlY2F1c2UgaXQgYWN0dWFsbHkgaG9sZHMgZGF0YTogMTAgTWVkaWNhdGlvblN0YXRlbWVudHMsIGFsbCBmb3IgdGhhdAogICMgc3ViamVjdCwgYWxsIHN0YXR1cz1hY3RpdmUuIFRoYXQgbWFrZXMgdGhlIHRlc3QgRVhFQ1VURSBlbmQgdG8gZW5kLAogICMgd2hpY2ggaXMgd2hhdCBpdCBpcyBmb3IgcmlnaHQgbm93LgogICMKICAjIGhhcGkgaXMgYSBwbGFpbiBGSElSIHNlcnZlciwgTk9UIGEgTUVPVyBSZXNwb25kZXIsIHNvIGV4cGVjdDoKICAjICAgMDAxICBwYXNzZXMgZXhjZXB0IHRoZSBtZXRhLnByb2ZpbGUgY2hlY2sg4oCUIG5vdGhpbmcgdGhlcmUgY2xhaW1zCiAgIyAgICAgICAgTWVkaWNhdGlvblRyZWF0bWVudExpbmUKICAjICAgMDAyICBwYXNzZXM6IHN0YXR1cz1hY3RpdmUgZmlsdGVycywgX2xhc3RVcGRhdGVkPWd0Mjk5OSBpcyBlbXB0eQogICMgICAwMDMgIEZBSUxTOiBoYXBpIGFuc3dlcnMgMjAwIHRvIGFuIHVuc2NvcGVkIHF1ZXJ5IGluc3RlYWQgb2YgNDAwCiAgIyAgIDAwNCAgRkFJTFM6IG5vIE1FT1cgZG9jdW1lbnQgQnVuZGxlcywgYW5kIC9CdW5kbGUvbWVvdy10ZXN0LW92ZXJ2aWV3CiAgIyAgICAgICAgZG9lcyBub3QgZXhpc3QKICAjCiAgIyBUaG9zZSBmYWlsdXJlcyBhcmUgdGhlIHRlc3Qgd29ya2luZyBjb3JyZWN0bHkgYWdhaW5zdCBhIHNlcnZlciB0aGF0CiAgIyBkb2VzIG5vdCBpbXBsZW1lbnQgdGhlIHByb2ZpbGUuIFBvaW50IHRoZSBCYWNrZ3JvdW5kIGF0IGEgcmVhbAogICMgUmVzcG9uZGVyIGZvciBhbiBhY3R1YWwgY29uZm9ybWFuY2UgcnVuLgogICMKICAjIFRoZSBwYXRpZW50IGlkIENBTk5PVCBiZSBsaWZ0ZWQgaW50byBhIHZhcmlhYmxlOiBgZ2V0cyBmcm9tIDxBY3Rvcj4gYXQKICAjICI8cGF0aD4iYCBjb21waWxlcyB0aGUgcGF0aCB0byBhIFRETCBzdHJpbmcgbGl0ZXJhbCBpbnNpZGUgY29uY2F0KCksCiAgIyBhbmQgVERMIHN0cmluZyBsaXRlcmFscyBkbyBub3QgaW50ZXJwb2xhdGUgJHZhcmlhYmxlcyAodGhlIHNhbWUgY2F2ZWF0CiAgIyBlbi55bWwgZG9jdW1lbnRzIG9uIHRoZSBhYnNvbHV0ZSBgZ2V0cyAiPHVybD4iYCBmb3JtKS4gU28gaXQgaXMgYQogICMgZmluZC1hbmQtcmVwbGFjZSBvbiB0aGUgaWQsIG9yIHJlYWNoIGZvciBgY2FsbCBzY3JpcHRsZXRgIHdpdGggYW4KICAjIGlubGluZSBib2R5IGlmIHlvdSBuZWVkIGEgZ2VudWluZWx5IGR5bmFtaWMgcGF0aC4KCiAgQmFja2dyb3VuZDoKICAgIEdpdmVuIE1lZGljYXRpb25PdmVydmlld1Jlc3BvbmRlciBpcyB0aGUgc3lzdGVtIHVuZGVyIHRlc3QgYXQgImh0dHBzOi8vaGFwaS5maGlyLm9yZy9iYXNlUjQiIGFzIGRlZmluZWQgYnkgImh0dHBzOi8vcHJvZmlsZXMuaWhlLm5ldC9QSEFSTS9NRU9XL0NhcGFiaWxpdHlTdGF0ZW1lbnQvTWVkaWNhdGlvbk92ZXJ2aWV3UmVzcG9uZGVyIgogICAgIyBJVEIgcGxheXMgdGhlIENvbnN1bWVyIOKAlCBpdCBvcmlnaW5hdGVzIGV2ZXJ5IHJlcXVlc3QgYmVsb3cuCiAgICBBbmQgTWVkaWNhdGlvbk92ZXJ2aWV3Q29uc3VtZXIgaXMgaW5mcmFzdHJ1Y3R1cmUgYXMgZGVmaW5lZCBieSAiaHR0cHM6Ly9wcm9maWxlcy5paGUubmV0L1BIQVJNL01FT1cvQ2FwYWJpbGl0eVN0YXRlbWVudC9NZWRpY2F0aW9uT3ZlcnZpZXdDb25zdW1lciIKICAgICMgR0lUQi1jb21wYXRpYmxlIEZISVIgdmFsaWRhdG9yICh2YWxpZGF0b3JfY2xpLmphcikuIFNhbWUgYWN0b3IgdGhlCiAgICAjIFJBQ1NFTCB0cmFjayBmZWF0dXJlcyBhbmQgbWVvdy1jbGllbnQuZmVhdHVyZSB1c2UuCiAgICBBbmQgRkhJUlZhbGlkYXRvciBpcyBpbmZyYXN0cnVjdHVyZSBhdCAiaHR0cDovL2ZoaXItdmFsaWRhdG9yOjgwODAiCgogICMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgIyAxLiBQSEFSTS0xMSDigJQgcXVlcnkgYnkgcGF0aWVudAogICMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgU2NlbmFyaW86IHRjLW1lb3ctc2VydmVyLTAwMSBQSEFSTS0xMSBxdWVyeSBieSBwYXRpZW50IHJldHVybnMgdHJlYXRtZW50IGxpbmVzCgogICAgIyBJSEUgTUVPVyAxLjAuMC1wcmV2aWV3LCB0aGUgb2ZmaWNpYWwgSUhFIHB1YmxpY2F0aW9uIOKAlCB0aGUgb25seQogICAgIyB2ZXJzaW9uIHB1Ymxpc2hlZCAocGFja2FnZXMuZmhpci5vcmcgbGlzdHMgMS4wLjAtcHJldmlldyBhbmQgbm90aGluZwogICAgIyBlbHNlKS4gTm8gbG9jYWwgcGFja2FnZSBzZXJ2ZXIgaW52b2x2ZWQuCiAgICAjCiAgICAjIFRoZSBVUkwgTVVTVCBlbmQgaW4gLnRnei4gVGhlIHZhbGlkYXRvciBzbmlmZnMgZm9ybWF0IGZyb20gdGhlCiAgICAjIGV4dGVuc2lvbiwgc28gdGhlIHJlZ2lzdHJ5IGZvcm0KICAgICMgaHR0cHM6Ly9wYWNrYWdlcy5maGlyLm9yZy9paGUucGhhcm0ubWVvdy8xLjAuMC1wcmV2aWV3IOKAlCB3aGljaCBzZXJ2ZXMKICAgICMgdGhlIGlkZW50aWNhbCAxODcsNjkyLWJ5dGUgdGFyYmFsbCBidXQgY2FycmllcyBubyBleHRlbnNpb24g4oCUIG1ha2VzIGl0CiAgICAjIHJlYWQgZ3ppcCBieXRlcyBhcyBYTUwgYW5kIGRpZSB3aXRoCiAgICAjICJbRmF0YWwgRXJyb3JdIDoxOjE6IEludmFsaWQgYnl0ZSAxIG9mIDEtYnl0ZSBVVEYtOCBzZXF1ZW5jZSIuCiAgICAjCiAgICAjIEtOT1dOOiB0aGlzIGJ1aWxkIGhhcyBicm9rZW4gQnVuZGxlLmVudHJ5IHNsaWNpbmcg4oCUIGl0IG1pcy1zbGljZXMgZXZlcnkKICAgICMgZW50cnkgaW50byB0aGUgUGF0aWVudCBzbGljZSwgd2hpY2ggaXMgd2h5IFJBQ1NFTC10cmFjazMgY2FycmllcyBhCiAgICAjIDEwLWNsYXVzZSBleGFjdC1lcnJvciBtYXNrLiBUaGUgYGNvbmZvcm1zIHRvYCBpbiB0Yy1tZW93LXNlcnZlci0wMDQgaXMKICAgICMgZXhwZWN0ZWQgdG8gcmVwb3J0IGVycm9ycyBhZ2FpbnN0IGl0LiBEZWxpYmVyYXRlbHkgTk9UIG1hc2tlZCBoZXJlOiB0aGUKICAgICMgZXJyb3JzIGFyZSByZWFsIG91dHB1dCBmcm9tIHRoZSByZWFsIHB1Ymxpc2hlZCBwcm9maWxlLCBhbmQgbWFza2luZwogICAgIyB0aGVtIHdvdWxkIGhpZGUgZ2VudWluZSBmaW5kaW5ncyBhbG9uZ3NpZGUgdGhlIGtub3duIG9uZXMuIFJlbW92ZSB0aGlzCiAgICAjIG5vdGUgb25jZSAxLjAuMC1wcmV2aWV3MiAoZml4ZWQgc2xpY2luZykgaXMgcHVibGlzaGVkLgogICAgV2hlbiBNZWRpY2F0aW9uT3ZlcnZpZXdDb25zdW1lciBsb2FkcyBJRyAiaHR0cHM6Ly9wcm9maWxlcy5paGUubmV0L1BIQVJNL01FT1cvcGFja2FnZS50Z3oiIG9uIEZISVJWYWxpZGF0b3IKICAgIFRoZW4gInJlc3BvbnNlIHN0YXR1cyIgc2hvdWxkIGJlICIyMDAiCgogICAgIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICMgVGhlIG9uZSBtYW5kYXRvcnkgUEhBUk0tMTEgcXVlcnk6IHBhdGllbnQgYW5kIG5vdGhpbmcgZWxzZS4KICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICBXaGVuIE1lZGljYXRpb25PdmVydmlld0NvbnN1bWVyIGdldHMgZnJvbSBNZWRpY2F0aW9uT3ZlcnZpZXdSZXNwb25kZXIgYXQgIi9NZWRpY2F0aW9uU3RhdGVtZW50P3BhdGllbnQ9MTM3MjAyNjMxIiBhcyAibGluZXMiCiAgICBUaGVuICJyZXNwb25zZSBzdGF0dXMiIHNob3VsZCBiZSAiMjAwIgogICAgQW5kICJsaW5lcyIgc2hvdWxkIG5vdCBiZSBlbXB0eQoKICAgICMgQSBGSElSIHNlYXJjaCBhbHdheXMgYW5zd2VycyB3aXRoIGEgc2VhcmNoc2V0IEJ1bmRsZSwgbmV2ZXIgYSBiYXJlCiAgICAjIHJlc291cmNlIGFuZCBuZXZlciBhbiBPcGVyYXRpb25PdXRjb21lIG9uIHN1Y2Nlc3MuCiAgICBBbmQgZXZhbHVhdGUgRkhJUlBhdGggIkJ1bmRsZS50eXBlIiBvbiAibGluZXMiIGFuZCBleHBlY3QgInNlYXJjaHNldCIKCiAgICAjIFRoZSBzZXJ2ZXIgbXVzdCBhY3R1YWxseSBob2xkIGRhdGEgZm9yIHRoZSB0ZXN0IHBhdGllbnQg4oCUIGFuIGVtcHR5CiAgICAjIHNlYXJjaHNldCBpcyBhIHZhbGlkIEJ1bmRsZSBidXQgdGVsbHMgdXMgbm90aGluZyBhYm91dCBjb25mb3JtYW5jZSwKICAgICMgc28gZmFpbCBsb3VkbHkgcmF0aGVyIHRoYW4gcGFzcyB2YWN1b3VzbHkuCiAgICBBbmQgZXZhbHVhdGUgRkhJUlBhdGggIkJ1bmRsZS5lbnRyeS5leGlzdHMoKSIgb24gImxpbmVzIiBhbmQgZXhwZWN0ICJ0cnVlIgoKICAgICMgRXZlcnkgZW50cnkgbXVzdCBiZSBhIE1lZGljYXRpb25TdGF0ZW1lbnQuIGAuYWxsKClgIGlzIGVtcHR5LXRydWUgaW4KICAgICMgRkhJUlBhdGgsIHdoaWNoIGlzIHdoeSB0aGUgZXhpc3RlbmNlIGNoZWNrIGFib3ZlIGhhcyB0byBjb21lIGZpcnN0LgogICAgQW5kIGV2YWx1YXRlIEZISVJQYXRoICJCdW5kbGUuZW50cnkucmVzb3VyY2UuYWxsKCR0aGlzIGlzIE1lZGljYXRpb25TdGF0ZW1lbnQpIiBvbiAibGluZXMiIGFuZCBleHBlY3QgInRydWUiCgogICAgIyBFdmVyeSByZXR1cm5lZCBsaW5lIG11c3QgYmUgZm9yIHRoZSBwYXRpZW50IHRoYXQgd2FzIGFza2VkIGZvciDigJQKICAgICMgY2F0Y2hlcyBhIHNlcnZlciB0aGF0IGlnbm9yZXMgdGhlIHNlYXJjaCBwYXJhbWV0ZXIgYW5kIHJldHVybnMKICAgICMgZXZlcnl0aGluZyBpdCBoYXMuCiAgICBBbmQgZXZhbHVhdGUgRkhJUlBhdGggIkJ1bmRsZS5lbnRyeS5yZXNvdXJjZS5zdWJqZWN0LnJlZmVyZW5jZS5hbGwoZW5kc1dpdGgoJzEzNzIwMjYzMScpKSIgb24gImxpbmVzIiBhbmQgZXhwZWN0ICJ0cnVlIgoKICAgICMgUEhBUk0tMTEgcHJvZmlsZXMgdGhlIHJlc3BvbnNlIGFzIE1lZGljYXRpb25UcmVhdG1lbnRMaW5lLiBBIHNlcnZlcgogICAgIyB0aGF0IGNsYWltcyB0aGUgcHJvZmlsZSBtdXN0IHNheSBzbyBpbiBtZXRhLnByb2ZpbGUuCiAgICBBbmQgZXZhbHVhdGUgRkhJUlBhdGggIkJ1bmRsZS5lbnRyeS5yZXNvdXJjZS5tZXRhLnByb2ZpbGUud2hlcmUoJHRoaXMuc3RhcnRzV2l0aCgnaHR0cHM6Ly9wcm9maWxlcy5paGUubmV0L1BIQVJNL01FT1cvU3RydWN0dXJlRGVmaW5pdGlvbi9NZWRpY2F0aW9uVHJlYXRtZW50TGluZScpKS5leGlzdHMoKSIgb24gImxpbmVzIiBhbmQgZXhwZWN0ICJ0cnVlIgoKICAjID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICMgMi4gUEhBUk0tMTEg4oCUIG9wdGlvbmFsIHNlYXJjaCBwYXJhbWV0ZXJzCiAgIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAjIEVhY2ggb3B0aW9uYWwgcGFyYW1ldGVyIGlzIGNoZWNrZWQgYnkgaXRzIEVGRkVDVCwgbm90IG1lcmVseSBieSB0aGUKICAjIHNlcnZlciByZXR1cm5pbmcgMjAwOiBhIHNlcnZlciB0aGF0IGFjY2VwdHMgYHN0YXR1cz1hY3RpdmVgIGFuZCB0aGVuCiAgIyBpZ25vcmVzIGl0IGlzIG5vdCBjb25mb3JtYW50LCBhbmQgYSBzdGF0dXMtY29kZSBjaGVjayB3b3VsZCBtaXNzIHRoYXQuCiAgU2NlbmFyaW86IHRjLW1lb3ctc2VydmVyLTAwMiBQSEFSTS0xMSBob25vdXJzIHRoZSBvcHRpb25hbCBzZWFyY2ggcGFyYW1ldGVycwoKICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAjIHN0YXR1cyDigJQgbmFycm93IHRvIGFjdGl2ZSB0cmVhdG1lbnQgbGluZXMuCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgV2hlbiBNZWRpY2F0aW9uT3ZlcnZpZXdDb25zdW1lciBnZXRzIGZyb20gTWVkaWNhdGlvbk92ZXJ2aWV3UmVzcG9uZGVyIGF0ICIvTWVkaWNhdGlvblN0YXRlbWVudD9wYXRpZW50PTEzNzIwMjYzMSZzdGF0dXM9YWN0aXZlIiBhcyAiYWN0aXZlTGluZXMiCiAgICBUaGVuICJyZXNwb25zZSBzdGF0dXMiIHNob3VsZCBiZSAiMjAwIgogICAgQW5kIGV2YWx1YXRlIEZISVJQYXRoICJCdW5kbGUudHlwZSIgb24gImFjdGl2ZUxpbmVzIiBhbmQgZXhwZWN0ICJzZWFyY2hzZXQiCiAgICAjIFRoZSBmaWx0ZXIgbXVzdCBoYXZlIGJlZW4gYXBwbGllZCDigJQgbm8gbm9uLWFjdGl2ZSBsaW5lIG1heSBjb21lIGJhY2suCiAgICBBbmQgZXZhbHVhdGUgRkhJUlBhdGggIkJ1bmRsZS5lbnRyeS5yZXNvdXJjZS5hbGwoc3RhdHVzID0gJ2FjdGl2ZScpIiBvbiAiYWN0aXZlTGluZXMiIGFuZCBleHBlY3QgInRydWUiCgogICAgIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICMgY2F0ZWdvcnkg4oCUIHRoZSBtZWRpY2F0aW9uIGxpc3QgY2F0ZWdvcnkgLyBsaXN0IHR5cGUuCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgV2hlbiBNZWRpY2F0aW9uT3ZlcnZpZXdDb25zdW1lciBnZXRzIGZyb20gTWVkaWNhdGlvbk92ZXJ2aWV3UmVzcG9uZGVyIGF0ICIvTWVkaWNhdGlvblN0YXRlbWVudD9wYXRpZW50PTEzNzIwMjYzMSZjYXRlZ29yeT1jb21tdW5pdHkiIGFzICJjYXRlZ29yeUxpbmVzIgogICAgVGhlbiAicmVzcG9uc2Ugc3RhdHVzIiBzaG91bGQgYmUgIjIwMCIKICAgIEFuZCBldmFsdWF0ZSBGSElSUGF0aCAiQnVuZGxlLnR5cGUiIG9uICJjYXRlZ29yeUxpbmVzIiBhbmQgZXhwZWN0ICJzZWFyY2hzZXQiCgogICAgIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICMgX2xhc3RVcGRhdGVkIOKAlCB0aGUgaW5jcmVtZW50YWwtc3luYyBwYXJhbWV0ZXIuIEEgZmFyLWZ1dHVyZSBpbnN0YW50CiAgICAjIG11c3QgcmV0dXJuIGFuIEVNUFRZIHNlYXJjaHNldDogbm90aGluZyBjYW4gaGF2ZSBiZWVuIHVwZGF0ZWQgYWZ0ZXIKICAgICMgaXQuIFRoaXMgcHJvdmVzIHRoZSBwYXJhbWV0ZXIgaXMgYXBwbGllZCB3aXRob3V0IGRlcGVuZGluZyBvbiBhbnkKICAgICMgcGFydGljdWxhciB0ZXN0IGRhdGEuCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgV2hlbiBNZWRpY2F0aW9uT3ZlcnZpZXdDb25zdW1lciBnZXRzIGZyb20gTWVkaWNhdGlvbk92ZXJ2aWV3UmVzcG9uZGVyIGF0ICIvTWVkaWNhdGlvblN0YXRlbWVudD9wYXRpZW50PTEzNzIwMjYzMSZfbGFzdFVwZGF0ZWQ9Z3QyOTk5LTAxLTAxIiBhcyAiZnV0dXJlTGluZXMiCiAgICBUaGVuICJyZXNwb25zZSBzdGF0dXMiIHNob3VsZCBiZSAiMjAwIgogICAgQW5kIGV2YWx1YXRlIEZISVJQYXRoICJCdW5kbGUudHlwZSIgb24gImZ1dHVyZUxpbmVzIiBhbmQgZXhwZWN0ICJzZWFyY2hzZXQiCiAgICBBbmQgZXZhbHVhdGUgRkhJUlBhdGggIkJ1bmRsZS5lbnRyeS5leGlzdHMoKSIgb24gImZ1dHVyZUxpbmVzIiBhbmQgZXhwZWN0ICJmYWxzZSIKCiAgIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAjIDMuIFBIQVJNLTExIOKAlCB0aGUgcmVxdWlyZWQgcGFyYW1ldGVyIGlzIGVuZm9yY2VkCiAgIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAjIGBwYXRpZW50YCBpcyB0aGUgb25lIFJFUVVJUkVEIHNlYXJjaCBwYXJhbWV0ZXIuIEEgUmVzcG9uZGVyIHRoYXQKICAjIGFuc3dlcnMgMjAwIHdpdGggZXZlcnl0aGluZyBpdCBob2xkcyBmb3IgYSBxdWVyeSB3aXRoIG5vIHBhdGllbnQgaXMKICAjIGxlYWtpbmcgYWNyb3NzIHBhdGllbnRzLCBzbyB0aGlzIGlzIGEgc2VjdXJpdHktcmVsZXZhbnQgY2hlY2ssIG5vdCBhCiAgIyBwZWRhbnRpYyBvbmUuCiAgU2NlbmFyaW86IHRjLW1lb3ctc2VydmVyLTAwMyBQSEFSTS0xMSByZWplY3RzIGEgcXVlcnkgd2l0aG91dCB0aGUgcmVxdWlyZWQgcGF0aWVudAoKICAgIFdoZW4gTWVkaWNhdGlvbk92ZXJ2aWV3Q29uc3VtZXIgZ2V0cyBmcm9tIE1lZGljYXRpb25PdmVydmlld1Jlc3BvbmRlciBhdCAiL01lZGljYXRpb25TdGF0ZW1lbnQiIGFzICJ1bnNjb3BlZCIKCiAgICAjIEV4cGVjdCBhIGNsaWVudCBlcnJvci4gNDAwIGlzIHRoZSB1c3VhbCBhbnN3ZXI7IGEgc2VydmVyIHRoYXQgdXNlcwogICAgIyA0MjIgaW5zdGVhZCBpcyBzdGlsbCByZWZ1c2luZyB0aGUgcXVlcnkg4oCUIGNoYW5nZSB0aGUgZXhwZWN0ZWQgY29kZQogICAgIyBoZXJlIGlmIHRoYXQgaXMgeW91ciBzZXJ2ZXIncyBkb2N1bWVudGVkIGJlaGF2aW91ci4KICAgIFRoZW4gInJlc3BvbnNlIHN0YXR1cyIgc2hvdWxkIGJlICI0MDAiCgogICAgIyBGSElSIHJlcXVpcmVzIGFuIE9wZXJhdGlvbk91dGNvbWUgdG8gY2FycnkgdGhlIHJlZnVzYWwsIGFuZCBpdCBtdXN0CiAgICAjIGJlIGVycm9yLW9yLXdvcnNlLCBub3QgYSB3YXJuaW5nIHRoZSBjbGllbnQgY291bGQgaWdub3JlLgogICAgQW5kIGV2YWx1YXRlIEZISVJQYXRoICJPcGVyYXRpb25PdXRjb21lLmlzc3VlLmV4aXN0cygpIiBvbiAidW5zY29wZWQiIGFuZCBleHBlY3QgInRydWUiCiAgICBBbmQgZXZhbHVhdGUgRkhJUlBhdGggIk9wZXJhdGlvbk91dGNvbWUuaXNzdWUud2hlcmUoc2V2ZXJpdHkgaW4gKCdlcnJvcicgfCAnZmF0YWwnKSkuZXhpc3RzKCkiIG9uICJ1bnNjb3BlZCIgYW5kIGV4cGVjdCAidHJ1ZSIKCiAgIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAjIDQuIFBIQVJNLTEyIOKAlCBEb2N1bWVudCBPcHRpb24KICAjID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICMgT25seSBhcHBsaWVzIHRvIGEgUmVzcG9uZGVyIHRoYXQgZGVjbGFyZXMgdGhlIERvY3VtZW50IE9wdGlvbi4gU2tpcAogICMgdGhpcyBzY2VuYXJpbyBmb3IgYSBSZXNwb25kZXIgdGhhdCBzdXBwb3J0cyBQSEFSTS0xMSBhbG9uZS4KICBTY2VuYXJpbzogdGMtbWVvdy1zZXJ2ZXItMDA0IFBIQVJNLTEyIHJldHVybnMgYSBjb25mb3JtYW50IE1lZGljYXRpb25PdmVydmlldwoKICAgIFdoZW4gTWVkaWNhdGlvbk92ZXJ2aWV3Q29uc3VtZXIgbG9hZHMgSUcgImh0dHBzOi8vcHJvZmlsZXMuaWhlLm5ldC9QSEFSTS9NRU9XL3BhY2thZ2UudGd6IiBvbiBGSElSVmFsaWRhdG9yCiAgICBUaGVuICJyZXNwb25zZSBzdGF0dXMiIHNob3VsZCBiZSAiMjAwIgoKICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAjIFBhdGllbnQtc2NvcGVkIGRvY3VtZW50IHNlYXJjaC4gYHBhdGllbnRgIGlzIHJlcXVpcmVkIGhlcmUgdG9vLgogICAgIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIFdoZW4gTWVkaWNhdGlvbk92ZXJ2aWV3Q29uc3VtZXIgZ2V0cyBmcm9tIE1lZGljYXRpb25PdmVydmlld1Jlc3BvbmRlciBhdCAiL0J1bmRsZT9wYXRpZW50PTEzNzIwMjYzMSZ0eXBlPWRvY3VtZW50IiBhcyAiZG9jU2VhcmNoIgogICAgVGhlbiAicmVzcG9uc2Ugc3RhdHVzIiBzaG91bGQgYmUgIjIwMCIKICAgIEFuZCBldmFsdWF0ZSBGSElSUGF0aCAiQnVuZGxlLnR5cGUiIG9uICJkb2NTZWFyY2giIGFuZCBleHBlY3QgInNlYXJjaHNldCIKICAgIEFuZCBldmFsdWF0ZSBGSElSUGF0aCAiQnVuZGxlLmVudHJ5LmV4aXN0cygpIiBvbiAiZG9jU2VhcmNoIiBhbmQgZXhwZWN0ICJ0cnVlIgoKICAgICMgVGhlIHNlYXJjaCB3cmFwcyB0aGUgb3ZlcnZpZXc6IG91dGVyIEJ1bmRsZSBpcyB0aGUgc2VhcmNoc2V0LCB0aGUKICAgICMgZW50cnkgcmVzb3VyY2UgaXMgdGhlIE1lZGljYXRpb25PdmVydmlldyBkb2N1bWVudCBpdHNlbGYuCiAgICBBbmQgZXZhbHVhdGUgRkhJUlBhdGggIkJ1bmRsZS5lbnRyeS5yZXNvdXJjZS5hbGwoJHRoaXMgaXMgQnVuZGxlKSIgb24gImRvY1NlYXJjaCIgYW5kIGV4cGVjdCAidHJ1ZSIKICAgIEFuZCBldmFsdWF0ZSBGSElSUGF0aCAiQnVuZGxlLmVudHJ5LnJlc291cmNlLmFsbCh0eXBlID0gJ2RvY3VtZW50JykiIG9uICJkb2NTZWFyY2giIGFuZCBleHBlY3QgInRydWUiCgogICAgIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICMgUmVhZCB0aGUgb3ZlcnZpZXcgZGlyZWN0bHkgYW5kIGhvbGQgdGhlIHNlcnZlciB0byB0aGUgcHJvZmlsZS4KICAgICMKICAgICMgTk9URSBPTiBUSEUgSUQ6IGxpa2UgdGhlIHBhdGllbnQgaWQsIHRoaXMgaXMgYSBsaXRlcmFsIOKAlCB0aGUgaWQKICAgICMgY2Fubm90IGJlIGNhcnJpZWQgb3ZlciBmcm9tIHRoZSBzZWFyY2ggYWJvdmUsIGJlY2F1c2UgYSBUREwgc3RyaW5nCiAgICAjIGxpdGVyYWwgd2lsbCBub3QgaW50ZXJwb2xhdGUgYSAkdmFyaWFibGUgaW50byB0aGUgcGF0aC4gUmVwbGFjZQogICAgIyBgbWVvdy10ZXN0LW92ZXJ2aWV3YCB3aXRoIGEgcmVhbCBCdW5kbGUgaWQgZnJvbSB5b3VyIHNlcnZlci4KICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICBXaGVuIE1lZGljYXRpb25PdmVydmlld0NvbnN1bWVyIGdldHMgZnJvbSBNZWRpY2F0aW9uT3ZlcnZpZXdSZXNwb25kZXIgYXQgIi9CdW5kbGUvbWVvdy10ZXN0LW92ZXJ2aWV3IiBhcyAib3ZlcnZpZXciCiAgICBUaGVuICJyZXNwb25zZSBzdGF0dXMiIHNob3VsZCBiZSAiMjAwIgoKICAgICMgQ2hlYXAgc3RydWN0dXJhbCBnYXRlIGJlZm9yZSB0aGUgZXhwZW5zaXZlIHByb2ZpbGUgdmFsaWRhdGlvbiwgc28gYQogICAgIyB3cm9uZyBwYXlsb2FkIGZhaWxzIGNsZWFybHkgaW5zdGVhZCBvZiBhcyBhIHdhbGwgb2YgdmFsaWRhdG9yIG91dHB1dC4KICAgIEFuZCBldmFsdWF0ZSBGSElSUGF0aCAiQnVuZGxlLnR5cGUiIG9uICJvdmVydmlldyIgYW5kIGV4cGVjdCAiZG9jdW1lbnQiCgogICAgIyBUaGUgY29uZm9ybWFuY2UgYXNzZXJ0aW9uIHByb3BlciDigJQgZmFpbHMgb24gYW55IGVycm9yLWxldmVsIGlzc3VlLgogICAgQW5kICJvdmVydmlldyIgY29uZm9ybXMgdG8gImh0dHBzOi8vcHJvZmlsZXMuaWhlLm5ldC9QSEFSTS9NRU9XL1N0cnVjdHVyZURlZmluaXRpb24vTWVkaWNhdGlvbk92ZXJ2aWV3IgoKICAgICMgQ29udGVudCBjaGVja3MgdGhlIHByb2ZpbGUgYWxvbmUgd2lsbCBub3QgY2F0Y2g6IGEgQnVuZGxlIGNhbiBiZQogICAgIyBzdHJ1Y3R1cmFsbHkgdmFsaWQgYW5kIHN0aWxsIGJlIGFuIGVtcHR5IG92ZXJ2aWV3LgogICAgQW5kIGV2YWx1YXRlIEZISVJQYXRoICJCdW5kbGUuZW50cnkucmVzb3VyY2Uub2ZUeXBlKENvbXBvc2l0aW9uKS5jb3VudCgpIiBvbiAib3ZlcnZpZXciIGFuZCBleHBlY3QgIjEiCiAgICBBbmQgZXZhbHVhdGUgRkhJUlBhdGggIkJ1bmRsZS5lbnRyeS5yZXNvdXJjZS5vZlR5cGUoUGF0aWVudCkuZXhpc3RzKCkiIG9uICJvdmVydmlldyIgYW5kIGV4cGVjdCAidHJ1ZSIKICAgIEFuZCBldmFsdWF0ZSBGSElSUGF0aCAiQnVuZGxlLmVudHJ5LnJlc291cmNlLm9mVHlwZShNZWRpY2F0aW9uU3RhdGVtZW50KS5leGlzdHMoKSIgb24gIm92ZXJ2aWV3IiBhbmQgZXhwZWN0ICJ0cnVlIgo=&quot;/&gt;
+&lt;/<a href="http://hl7.org/fhir/6.0.0-ballot5/binary.html#XBinary">Binary</a>&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/costateixeira/pharm-MEOW-test">Jose Costa Teixeira</a>.  
+          Package ihe.pharm.meow.test#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/6.0.0-ballot5/">FHIR 6.0.0-ballot5</a>.
+          Generated <span title="Mon, Aug 31, 2026 20:09+0000">2026-08-31</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
