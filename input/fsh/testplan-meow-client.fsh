@@ -14,20 +14,19 @@ Usage: #definition
 Title: "MEOW Consumer (Client) Test Plan"
 Description: "Test plan for the Medication Overview Consumer actor (the MEOW client) of IHE PHARM MEOW."
 
-* url = "http://example.com/fhir/example/TestPlan/meow-client-tests"
+* url = "http://example.com/fhir/ihe.pharm.meow.test/TestPlan/meow-client-tests"
 * version = "1.0.0"
 * name = "MEOWClientTestPlan"
 * title = "MEOW Consumer (Client) Test Plan"
 * status = #draft
 * experimental = true
 * date = "2026-08-26"
-* publisher = "My Organization"
+* publisher = "Jose Costa Teixeira"
 * contact
-  * name = "Bob Smith"
+  * name = "Jose Costa Teixeira"
   * telecom
-    * system = #email
-    * value = "bobsmith@example.com"
-    * use = #work
+    * system = #url
+    * value = "https://github.com/costateixeira/pharm-MEOW-test"
 
 * description = """
 Test plan for the **Medication Overview Consumer** actor (the *MEOW client*) defined by the

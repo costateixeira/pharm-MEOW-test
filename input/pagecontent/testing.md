@@ -1,6 +1,6 @@
 <a name="scope"> </a>
 
-### Testing the MEOW client
+### Testing the MEOW actors
 
 This guide declares its tests using the [TestPlan](https://build.fhir.org/ig/HL7/fhir-testing-ig/en/StructureDefinition-TestPlan.html) resource, which comes from the [FHIR Testing IG](https://build.fhir.org/ig/HL7/fhir-testing-ig/en/) (package `hl7.fhir.uv.testing`).
 

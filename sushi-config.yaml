@@ -9,13 +9,16 @@
 
 id: ihe.pharm.meow.test
 canonical: http://example.com/fhir/ihe.pharm.meow.test
-url: http://example.com/fhir/example/ImplementationGuide/ihe.pharm.meow.test
-name: ExampleIG
-title: "HL7 FHIR Implementation Guide: Example IG Release 1 - US Realm | STU1"
-description: Example IG exercises many of the fields in a SUSHI configuration.
+url: http://example.com/fhir/ihe.pharm.meow.test/ImplementationGuide/ihe.pharm.meow.test
+name: IHEPharmMEOWTesting
+title: "IHE PHARM MEOW: TestPlan and Gherkin Demonstration"
+description: >-
+  A demonstration IG showing how the TestPlan resource and Gherkin feature files
+  can declare the conformance tests for the actors of IHE PHARM Medication
+  Overview (MEOW). Not an approved IHE test specification.
 status: active
 license: CC0-1.0
-date: 2020-02-26
+date: 2026-08-27
 version: 1.0.0
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
@@ -29,25 +32,22 @@ fhirVersion: 6.0.0-ballot5
 # camelcase, but if authors use the formal parameter names, SUSHI
 # will recognize them as well. In either case, they'll be copied
 # to the IG JSON using the formal names.
-copyrightYear: 2021+
-releaseLabel: STU1
+copyrightYear: 2026+
+releaseLabel: ci-build
 
 # The publisher can be a single item or a list, each with a name and
 # optional url and/or email. The first publisher's name will be used
 # as IG.publisher.  The contact details and/or additional publishers
 # will be translated into IG.contact values.
 publisher:
-  name: My Organization 
-  url: http://example.com/committees
-  email: my-group@example.com
+  name: Jose Costa Teixeira
 
 # ContactDetail is required by the template.
 contact:
-  - name: Bob Smith
+  - name: Jose Costa Teixeira
     telecom:
-      - system: email
-        value: bobsmith@example.com
-        use: work
+      - system: url
+        value: https://github.com/costateixeira/pharm-MEOW-test
 
 # The jurisdiction can be a single item or a list. The FHIR Shorthand
 # code syntax can be used here.
