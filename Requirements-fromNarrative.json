@@ -1,7 +1,7 @@
 {
   "resourceType" : "Requirements",
   "id" : "fromNarrative",
-  "url" : "http://example.com/fhir/example/Requirements/fromNarrative",
+  "url" : "http://example.com/fhir/ihe.pharm.meow.test/Requirements/fromNarrative",
   "name" : "FromNarrative",
   "title" : "Narrative Conformance Statements",
   "status" : "active",

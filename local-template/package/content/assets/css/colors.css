@@ -1,43 +1,52 @@
+/* ====================================================================
+   MEOW TestPlan demonstration - local palette
+   --------------------------------------------------------------------
+   This IG is a TEST package, not a specification. The header, the header
+   strip and the footer are deliberately teal/slate rather than the usual
+   red or blue of a published spec, so it reads as "test material" at a
+   glance. Amber is used for the publish box, as a second signal.
+
+   Variable names come from project.css in the base template.
+   ==================================================================== */
 :root {
 
-  --ig-status-text-color: maroon; /* 1. IG Title and status text color */
-  --navbar-bg-color: #ad1f2f; /* 2. Header container color */
-  --footer-bg-color: #707070; /* 3. Footer background color*/
-  --footer-container-bg-color: #ad1f2f; /* 4. Footer container color */
-  --stripe-bg-color: #999999; /* 5. Header strip color */
+  --ig-status-text-color: #0b4a4c;      /*  1. IG title and status text      */
+  --navbar-bg-color: #0f6466;           /*  2. Header container - deep teal   */
+  --footer-bg-color: #263238;           /*  3. Footer background - slate      */
+  --footer-container-bg-color: #0f6466; /*  4. Footer container - deep teal   */
+  --stripe-bg-color: #0b4a4c;           /*  5. Header strip - darker teal     */
 
-  --btn-hover-color: #790713;  /* 6. Menu button hover color */
-  --btn-active-color: #da0c23; /* 7. Menu button active color */
-  --btn-text-color: #e6e6e6; /* 8. Menu button text color */
-  --btn-gradient-start-color: #428bca; /* 9. Menu item gradient start color */
-  --btn-gradient-end-color: #357ebd; /* 10. Menu item gradient end  color */
-  --btn-gradient-start-color-alpha: #ff428bca; /* 11. Menu item gradient start color (with alpha) */
-  --btn-gradient-end-color-alpha: #ff357ebd; /* 12. Menu item gradient end color (with alpha) */
-  --link-color: #428bca; /* 13. Hyperlink text color */
-  --link-hover-color: #2a6496; /* 14. Hyperlink text hover color */
+  --btn-hover-color: #0b4a4c;           /*  6. Menu button hover              */
+  --btn-active-color: #14807f;          /*  7. Menu button active             */
+  --btn-text-color: #eaf6f6;            /*  8. Menu button text               */
+  --btn-gradient-start-color: #14807f;  /*  9. Menu item gradient start       */
+  --btn-gradient-end-color: #0f6466;    /* 10. Menu item gradient end         */
+  --btn-gradient-start-color-alpha: #ff14807f; /* 11. gradient start w/ alpha */
+  --btn-gradient-end-color-alpha: #ff0f6466;   /* 12. gradient end w/ alpha   */
+  --link-color: #0f6466;                /* 13. Hyperlink                      */
+  --link-hover-color: #0b4a4c;          /* 14. Hyperlink hover                */
 
-  --publish-box-bg-color: yellow; /* 15. Publish box background color */
-  --publish-box-border: 1px solid #0A0008; /* 16.  Publish box border definition */
+  --publish-box-bg-color: #ffe9a8;      /* 15. Publish box - amber            */
+  --publish-box-border: 1px solid #a67c00; /* 16. Publish box border          */
 
-  --toc-box-bg-color: #ffeb7e; /* 17.  TOC box background color */
-  --toc-box-border: 1px solid navy; /* 18. TOC box border definition */
+  --toc-box-bg-color: #e3f2f1;          /* 17. TOC box background             */
+  --toc-box-border: 1px solid #0f6466;  /* 18. TOC box border                 */
 
-  --stu-note-background-color: #fff2ff; /* 19. (STU) Note box background color */
-  --stu-note-border-left-color: #ffa0ff; /* 20. (STU) Note box border color */
+  --stu-note-background-color: #fff8e6; /* 19. (STU) note background - amber  */
+  --stu-note-border-left-color: #e0a800;/* 20. (STU) note border              */
 
-  --ig-header-color: #f5f5f5; /* 21. Header color (sides) */
-  --ig-header-container-color: #ffffff; /* 22. Header container color (center) */
-  --footer-nav-bg-color: #f5f5f5; /* 23. Footer navigation background color*/
+  --ig-header-color: #eef5f5;           /* 21. Header sides                   */
+  --ig-header-container-color: #ffffff; /* 22. Header centre                  */
+  --footer-nav-bg-color: #eef5f5;       /* 23. Footer navigation background   */
 
-  --footer-text-color: #ffffff; /* 24. Footer highlight font color */
-  --footer-hyperlink-text-color: #81BEF7; /* 25. Footer hyperlinks font color */
-  --footer-highlight-text-color: #ffff77; /* 26. Footer highlight font color */
+  --footer-text-color: #ffffff;         /* 24. Footer font                    */
+  --footer-hyperlink-text-color: #8fd6d4; /* 25. Footer hyperlinks            */
+  --footer-highlight-text-color: #ffe9a8; /* 26. Footer highlight             */
 
-  --breadcrumb-bg-color: #f5f5f5; /* 27. Breadcrumb font color */
-  --breadcrumb-text-color: ##555555; /* 28. Breadcrumb font color */
+  --breadcrumb-bg-color: #eef5f5;       /* 27. Breadcrumb background          */
+  --breadcrumb-text-color: #37474f;     /* 28. Breadcrumb font                */
 
-  --dragon-background-color: #fffbf7; /* 29. Dragon background color */
-  --dragon-text-color: #101020; /* 30. Dragon font color */
+  --dragon-background-color: #fffbf7;   /* 29. Dragon background              */
+  --dragon-text-color: #101020;         /* 30. Dragon font                    */
 
 }
-
