@@ -14,7 +14,12 @@ the package ourselves.
     python _package.py            # sushi + fix + package
     python _package.py --no-sushi # skip sushi, use existing fsh-generated/
 
-Output: output/package.tgz, laid out the way the publisher would:
+Output: dist/package.tgz, laid out the way the publisher would. It deliberately
+does NOT write into output/ - the IG Publisher owns that directory and would
+overwrite the tarball with its own build.
+
+If you do run the publisher afterwards, use -no-sushi: this script patches
+fsh-generated in place, and the publisher's own SUSHI pass would undo that.
 
     package/package.json
     package/.index.json
@@ -25,8 +30,9 @@ import io, json, os, shutil, subprocess, sys, tarfile, collections
 
 ROOT      = os.path.dirname(os.path.abspath(__file__))
 GENERATED = os.path.join(ROOT, 'fsh-generated', 'resources')
-STAGING   = os.path.join(ROOT, 'output', '_package')
-TARBALL   = os.path.join(ROOT, 'output', 'package.tgz')
+DIST      = os.path.join(ROOT, 'dist')
+STAGING   = os.path.join(DIST, '_staging')
+TARBALL   = os.path.join(DIST, 'package.tgz')
 TESTS_SRC = os.path.join(ROOT, 'input', 'testing', 'gherkin')
 TESTS_DST = 'tests/gherkin'
 FHIR_CACHE = os.path.join(os.path.expanduser('~'), '.fhir', 'packages')
@@ -129,7 +135,7 @@ def main():
     pkgdir = os.path.join(STAGING, 'package')
     os.makedirs(os.path.join(pkgdir, *TESTS_DST.split('/')))
 
-    ig, index, fixed = None, [], []
+    ig, index, fixed, repaired = None, [], [], []
     for name in sorted(os.listdir(GENERATED)):
         if not name.endswith('.json'):
             continue
@@ -144,6 +150,7 @@ def main():
             out.update((k, v) for k, v in d.items() if k != 'resourceType')
             d = out
             fixed.append('%s/%s' % (rt, d.get('id')))
+            repaired.append(('%s/%s' % (rt, d.get('id')), name, d))
 
         if rt == 'ImplementationGuide':
             ig = d
@@ -178,6 +185,19 @@ def main():
                    indent=2, ensure_ascii=False) + '\n')
     io.open(os.path.join(pkgdir, 'package.json'), 'w', encoding='utf-8', newline='\n').write(
         json.dumps(manifest(ig), indent=2, ensure_ascii=False) + '\n')
+
+    # Write the repaired resources back over fsh-generated as well. The IG
+    # Publisher reads that directory directly, so without this it parses the
+    # un-repaired files and silently drops runner / mode / suite - taking
+    # suite.input.file with them. Run the publisher with -no-sushi afterwards,
+    # or its own SUSHI pass regenerates these and undoes the repair.
+    for rt_id, name, doc in repaired:
+        io.open(os.path.join(GENERATED, name), 'w', encoding='utf-8', newline='\n').write(
+            json.dumps(doc, indent=2, ensure_ascii=False) + '\n')
+    if repaired:
+        print('== fsh-generated patched in place ==')
+        print('   %d resource(s) - run the publisher with -no-sushi to keep this'
+              % len(repaired))
 
     os.makedirs(os.path.dirname(TARBALL), exist_ok=True)
     with tarfile.open(TARBALL, 'w:gz') as tar:
