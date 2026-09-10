@@ -1,0 +1,94 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.com/fhir/ihe.pharm.meow.test/TestPlan/meow-client-tests> a fhir:TestPlan ;
+  fhir:resourceDefinition http://hl7.org/fhir/StructureDefinition/TestPlan|0.1.0-snapshot1 ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "meow-client-tests"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: TestPlan meow-client-tests</b></p><a name=\"meow-client-tests\"> </a><a name=\"hcmeow-client-tests\"> </a><p><b>Scopes</b></p><table class=\"grid\"><tr><td><b>Reference</b></td><td><b>Description</b></td></tr><tr><td><code>https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewConsumer</code></td><td>The Medication Overview Consumer (MEOW client) actor - the system under test.</td></tr></table><p><b>1 Suite: IHE MEOW Medication Overview Consumer - client-side conformance</b></p><p>Maps to the Feature of the same name in the Gherkin script. The test bed plays the Medication Overview Responder while the system under test drives every exchange.</p><p><b>Inputs</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>File</b></td></tr><tr><td>gherkin-script</td><td>meow-client-gherkin-script.feature</td></tr></table><p><b>Tests</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Description</b></td><td><b>Operation</b></td></tr><tr><td>tc-meow-client-001 PHARM-11 query by patient and by optional parameters</td><td>Three rounds, each a separate exchange triggered on the SUT, proving the Consumer can build each query rather than build one and repeat it: by patient alone, then patient + status, then patient + _lastUpdated.</td><td>gherkin/Scenario</td></tr><tr><td>tc-meow-client-002 Submitted overview conforms to MedicationOverview</td><td>MEOW defines no submit transaction - both CapabilityStatements are read/search only - so the endpoint is deployment-specific and only the payload is governed by the profile.</td><td>gherkin/Scenario</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://example.com/fhir/ihe.pharm.meow.test/TestPlan/meow-client-tests"^^xsd:anyURI ;
+     fhir:l <http://example.com/fhir/ihe.pharm.meow.test/TestPlan/meow-client-tests>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "MEOWClientTestPlan"] ; # 
+  fhir:title [ fhir:v "MEOW Consumer (Client) Test Plan"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2026-08-26"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "Jose Costa Teixeira"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Jose Costa Teixeira" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://github.com/costateixeira/pharm-MEOW-test" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Test plan for the **Medication Overview Consumer** actor (the *MEOW client*) defined by the\n[IHE PHARM Medication Overview (MEOW)](https://profiles.ihe.net/PHARM/MEOW/index.html) implementation guide.\n\nEach `suite.test` below corresponds to one `Scenario:` in the Gherkin feature file named by\n`suite.input.file`, matched by its `tc-meow-client-NNN` identifier. The system under test is the\n**client**: the SUT initiates every exchange, the test bed plays the Responder and judges what arrives."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "To declare, in a machine-readable and runnable form, which behaviours a system claiming conformance to the MEOW Medication Overview Consumer actor must demonstrate."] ; # 
+  fhir:scope ( [
+     fhir:reference [
+       fhir:v "https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewConsumer"^^xsd:anyURI ;
+       fhir:l <https://profiles.ihe.net/PHARM/MEOW/CapabilityStatement/MedicationOverviewConsumer>
+     ] ;
+     fhir:description [ fhir:v "The Medication Overview Consumer (MEOW client) actor - the system under test." ]
+  ] ) ; # 
+  fhir:runner [
+     fhir:v "https://www.itb.ec.europa.eu/docs/guides/latest/"^^xsd:anyURI ;
+     fhir:l <https://www.itb.ec.europa.eu/docs/guides/latest/>
+  ] ; # 
+  fhir:suite ( [
+     fhir:name [ fhir:v "IHE MEOW Medication Overview Consumer - client-side conformance" ] ;
+     fhir:description [ fhir:v "Maps to the Feature of the same name in the Gherkin script. The test bed plays the Medication Overview Responder while the system under test drives every exchange." ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "gherkin-script" ] ;
+       fhir:file [ fhir:v "meow-client-gherkin-script.feature" ]
+     ] ) ;
+     fhir:test ( [
+       fhir:name [ fhir:v "tc-meow-client-001 PHARM-11 query by patient and by optional parameters" ] ;
+       fhir:description [ fhir:v "Three rounds, each a separate exchange triggered on the SUT, proving the Consumer can build each query rather than build one and repeat it: by patient alone, then patient + status, then patient + _lastUpdated." ] ;
+       fhir:operation [ fhir:v "gherkin/Scenario" ] ;
+       fhir:assertion ( [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Every PHARM-11 query the Consumer issues is a GET against /MedicationStatement carrying a patient parameter. A query without patient is non-conformant no matter what else it carries." ]
+       ] [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "The Consumer asks for FHIR JSON, via the Accept header or the _format query parameter." ]
+       ] [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "The optional search parameters the Consumer declares support for are built into the query itself - status and _lastUpdated narrow the search server-side, rather than the Consumer pulling everything and filtering locally." ]
+       ] )
+     ] [
+       fhir:name [ fhir:v "tc-meow-client-002 Submitted overview conforms to MedicationOverview" ] ;
+       fhir:description [ fhir:v "MEOW defines no submit transaction - both CapabilityStatements are read/search only - so the endpoint is deployment-specific and only the payload is governed by the profile." ] ;
+       fhir:operation [ fhir:v "gherkin/Scenario" ] ;
+       fhir:assertion ( [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "The overview the Consumer submits is a POST carrying FHIR JSON." ]
+       ] [
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "The submitted Bundle validates against the MEOW MedicationOverview profile." ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

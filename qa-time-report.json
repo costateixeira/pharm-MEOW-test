@@ -1,0 +1,278 @@
+{
+  "date" : "Thu, 10 Sep, 2026 20:46:53 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-ihe.pharm.meow.test.json",
+    "size" : 4761,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 50,
+      "length" : 14
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 51,
+      "length" : 8
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 51,
+      "length" : 46
+    },
+    {
+      "activity" : "validate",
+      "start" : 51,
+      "length" : 4197
+    },
+    {
+      "activity" : "generate1",
+      "start" : 56,
+      "length" : 86
+    },
+    {
+      "activity" : "generate2",
+      "start" : 60,
+      "length" : 80
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 70,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 79,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Binary-meow-client-gherkin-script.json",
+    "size" : 15864,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 50,
+      "length" : 12
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 51,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 51,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 56,
+      "length" : 164
+    },
+    {
+      "activity" : "generate1",
+      "start" : 56,
+      "length" : 39
+    },
+    {
+      "activity" : "generate2",
+      "start" : 60,
+      "length" : 23
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Binary-meow-server-gherkin-script.json",
+    "size" : 18716,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 50,
+      "length" : 6
+    },
+    {
+      "activity" : "validate",
+      "start" : 56,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 56,
+      "length" : 46
+    },
+    {
+      "activity" : "generate2",
+      "start" : 60,
+      "length" : 18
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/TestPlan-meow-client-tests.json",
+    "size" : 3925,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 50,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 50,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 50,
+      "length" : 27
+    },
+    {
+      "activity" : "scan",
+      "start" : 51,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 51,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 51,
+      "length" : 178
+    },
+    {
+      "activity" : "validate",
+      "start" : 55,
+      "length" : 513
+    },
+    {
+      "activity" : "generate1",
+      "start" : 56,
+      "length" : 54
+    },
+    {
+      "activity" : "generate2",
+      "start" : 60,
+      "length" : 30
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 70,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/TestPlan-meow-server-tests.json",
+    "size" : 6185,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 50,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 50,
+      "length" : 7
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 51,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 51,
+      "length" : 165
+    },
+    {
+      "activity" : "validate",
+      "start" : 56,
+      "length" : 133
+    },
+    {
+      "activity" : "generate1",
+      "start" : 56,
+      "length" : 33
+    },
+    {
+      "activity" : "generate2",
+      "start" : 60,
+      "length" : 27
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/menu.xml",
+    "size" : 1209,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 60,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 243
+  },
+  {
+    "name" : "/input/data/features.yml",
+    "size" : 5
+  },
+  {
+    "name" : "/input/pagecontent/downloads.xml",
+    "size" : 1287,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 60,
+      "length" : 37
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/testing.md",
+    "size" : 5133,
+    "processes" : [{
+      "activity" : "load-configure",
+      "start" : 51,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 60,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/changes.xml",
+    "size" : 635,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 60,
+      "length" : 31
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 3029,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 60,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140
+  },
+  {
+    "name" : "/input/images",
+    "size" : 0
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 3811,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 60,
+      "length" : 1
+    }]
+  }]
+}
